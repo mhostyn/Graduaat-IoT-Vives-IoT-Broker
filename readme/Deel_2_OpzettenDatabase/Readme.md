@@ -39,8 +39,8 @@ type
 | |
 
 
-[1](../Readme.md)
-[2](./Readme.md)
+[1](/Readme.md)
+[2](/README.md)
 [3](https://github.com/mhostyn/Graduaat-IoT-Vives-IoT-Broker/blob/master/README.md)
 [4](../blob/master/README.md)
 [5](../blob/master/Readme.md)
