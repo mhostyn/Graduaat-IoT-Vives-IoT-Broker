@@ -10,33 +10,21 @@
 | name |
 | type |
 
-
-| Measurements  |
+| Measurements |
 | ------------- |
-| measurement_id      |
-| measurement_value     |
+| measurement_id |
+| measurement_value |
 
-
-Measurement_Types
---------
-measurementtype_id
-symbol
-type
-
-
-
-User_Types
-------
-usertype_id
-type
-
+| Measurement_Types |
+| -------- |
+| measurementtype_id |
+| symbol |
+| type |
 
 | Users |
 | ------------- |
 | user_id |
 | first_name |
 | last_name |
-| |
-
 
 [Home](..\..\Readme.md)
