@@ -1,0 +1,39 @@
+# Database
+
+## database schema
+
+### Tables
+
+| Sensors |
+| ------------- |
+| sensor_id |
+| name |
+| type |
+
+
+| Measurements  |
+| ------------- |
+| measurement_id      |
+| measurement_value     |
+
+
+Measurement_Types
+--------
+measurementtype_id
+symbol
+type
+
+
+
+User_Types
+------
+usertype_id
+type
+
+
+| Users |
+| ------------- |
+| user_id |
+| first_name |
+| last_name |
+| |
