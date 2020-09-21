@@ -1,5 +1,7 @@
-# Deel 1 - Server
+# Vives IoT Broker
 
-# Deel 2 - Databese
+## Deel 1 - Server
 
-[I'm a relative reference to a repository file](../Deel_2_OpzettenDatabase/../VIVES_IoT_Broker/Readme.md)
+## Deel 2 - Database
+
+[Database](.\readme\Deel_2_OpzettenDatabase\Readme.md)
