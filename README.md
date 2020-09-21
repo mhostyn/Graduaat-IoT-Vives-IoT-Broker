@@ -4,4 +4,6 @@
 
 ## Deel 2 - Database
 
-[Database](..\readme\Deel_2_OpzettenDatabase\Readme.md)
+[Database](./readme/Deel_2_OpzettenDatabase/Readme.md)
+
+[Home](/README.md)
