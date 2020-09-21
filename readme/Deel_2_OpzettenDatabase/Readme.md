@@ -39,4 +39,7 @@ type
 | |
 
 
-[Home](..\..\Readme.md)
+[Home](../Readme.md)
+[Home](./Readme.md)
+[Home](../../Readme.md)
+https://github.com/mhostyn/Graduaat-IoT-Vives-IoT-Broker/blob/master/README.md
