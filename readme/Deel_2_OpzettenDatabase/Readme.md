@@ -41,5 +41,9 @@ type
 
 [Home](../Readme.md)
 [Home](./Readme.md)
-[Home](././Readme.md)
+[Home](.../Readme.md)
+[I'm a relative reference to a repository file](../blob/master/Readme.md)
+
+
+
 https://github.com/mhostyn/Graduaat-IoT-Vives-IoT-Broker/blob/master/README.md
