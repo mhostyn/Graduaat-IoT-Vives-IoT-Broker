@@ -1,4 +1,4 @@
-# Deel 2 – Opzetten database 
+# Deel 2 – Opzetten database
 
 ## database schema
 

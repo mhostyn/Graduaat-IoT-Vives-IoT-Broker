@@ -1,6 +1,6 @@
 # Deel 1 – Voorbereiding Server
 
-### Hardware
+## Hardware
 
 > Server Rack + Zipties + RaspberryPi
 
