@@ -4,27 +4,20 @@
 
 ### Tables
 
-| Sensors |
-| ------------- |
-| sensor_id |
-| name |
-| type |
+'
+In de eerste stap gaan we op zoek naar de vorm van de database
+'
 
-| Measurements |
-| ------------- |
-| measurement_id |
-| measurement_value |
+[Database Schema](./database_schema.md)
 
-| Measurement_Types |
-| -------- |
-| measurementtype_id |
-| symbol |
-| type |
+## Setup
 
-| Users |
-| ------------- |
-| user_id |
-| first_name |
-| last_name |
+### Database Queries
+
+'
+Wanneer de structuur vast ligt kan men met de volgende Queries de database opzetten in een test of productieomgeving
+'
+
+[Database Queries](./database_queries.md)
 
 [Home](/README.md)
