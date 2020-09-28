@@ -24,7 +24,7 @@
 
 |  ToDo   | Started | Finished |Notes|
 | :-----: | :-----: | :------: | :--:|
-|    X    |    O    |    O     | |
+|    X    |    X    |    O     | |
 
 ### Homepagina
 
@@ -34,7 +34,7 @@
 
 |  ToDo   | Started | Finished |Notes|
 | :-----: | :-----: | :------: | :--:|
-|    X    |    O    |    O     | |
+|    X    |    X    |    O     | |
 
 ### Registratie gebruiker
 
@@ -44,7 +44,7 @@
 
 |  ToDo   | Started | Finished |Notes|
 | :-----: | :-----: | :------: | :--:|
-|    X    |    O    |    O     | |
+|    X    |    X    |    O     | |
 
 ### Login gebruiker
 
