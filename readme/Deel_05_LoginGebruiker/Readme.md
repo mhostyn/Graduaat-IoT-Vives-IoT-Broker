@@ -4,7 +4,7 @@
 
 Uw uitleg
 
-```
+```php
 <?php
 
 //volledig aanpassen aan database
