@@ -26,10 +26,10 @@ De Users tabel zal de informatie voor de gebruikers bijhouden
 
 |     | name                                       |      type        |
 | :-: | ------------------------------------------ |     :-----:      |
-| PK  | Sensor_id(NotNull, AutoIncr, Unique )      |       int        |
+| PK  | SENSOR_ID(NotNull, AutoIncr, Unique )      |       int        |
 |     | name( NotNull )                            |     varchar      |
 |	  | type (NotNull)							   |     varchar      |
-|	  | Unit (NotNull)							   |     varchar      |
+|	  | unit (NotNull)							   |     varchar      |
 |	  | timestamp()				                   |  date_time(now)  |
 | FK  | user_id (NotNull)					  	   |       int	      |
 
@@ -42,7 +42,7 @@ De tabel sensors bevat de gegevens van alle sensors zoals de unieke sensor_id,
 
 |     | name                                           |      type       |
 | :-: | ---------------------------------------------- |      :--:       |
-| PK  | Data_id(PK, NotNull, AutoIncr, Unique ) 	   |      int        |
+| PK  | DATA_ID(PK, NotNull, AutoIncr, Unique ) 	   |      int        |
 |     | value(NotNull)                             	   |      int        |
 |     | timestamp()                                    |  date_time(now) |
 | FK  | sensor_id(NotNull)               			   |      int        |
