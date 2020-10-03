@@ -1,2 +1,2 @@
 .vscode/settings.json
-SERVER_ROOT/var/www/html/config.php
+var/www/html/config.php
