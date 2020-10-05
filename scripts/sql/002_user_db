@@ -1,5 +1,5 @@
 SELECT Host, USER from mysql.user;
-CREATE USER 'webuser'@'localhost' identified by 'password';
+CREATE USER 'webuser'@'localhost' identified by 'hFRfjCptDik9RQHH';
 SELECT Host, User from mysql.user;
 Show databases;
 Create database iot-broker-db_dev;
