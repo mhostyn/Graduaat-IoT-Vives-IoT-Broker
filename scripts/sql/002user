@@ -1,0 +1,9 @@
+SELECT Host, USER from mysql.user;
+CREATE USER 'Test'@'localhost' identified by 'password';
+SELECT Host, User from mysql.user;
+Show databases;
+Create database iot-broker-db_dev;
+Use iot-broker-db_dev;
+grant select, insert, update on sensor.* to 'Test'@'localhost';
+grant select, insert, update on data.* to 'Test'@'localhost';
+flush privileges;
