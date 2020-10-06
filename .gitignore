@@ -1,3 +1,5 @@
 .vscode/settings.json
 SERVER_ROOT/var/www/html/config.php
 SERVER_ROOT/config.php
+SERVER_ROOT/php/config.php
+SERVER_ROOT/php/db_config.php
