@@ -1,1 +1,1 @@
-{\rtf1}
+# Voorbeeldlocatie voor het plaatsen van immages
