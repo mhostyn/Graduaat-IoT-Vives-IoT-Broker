@@ -3,7 +3,5 @@ CREATE USER 'webuser'@'localhost' identified by 'hFRfjCptDik9RQHH';
 SELECT Host, User from mysql.user;
 Show databases;
 Use 'iot-broker-db_dev';
-grant select, insert, update on sensor.* to 'webuser'@'localhost';
-grant select, insert, update on data.* to 'webuser'@'localhost';
-grant select, insert, update on user.* to 'webuser'@'localhost';
+grant select, insert, update on iot-broker-db_dev.* to 'webuser'@'localhost';
 flush privileges;
