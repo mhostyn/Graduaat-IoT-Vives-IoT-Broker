@@ -12,5 +12,5 @@
     $dbhost = 'localhost';
     $dbuser = 'webuser';
     $dbpass = 'hFRfjCptDik9RQHH';
-    $dbname = 'iot-broker-db_dev';
+    $dbname = 'iotBrokerDB';
 ?>
