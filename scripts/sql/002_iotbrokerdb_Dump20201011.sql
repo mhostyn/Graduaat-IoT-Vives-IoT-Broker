@@ -129,10 +129,10 @@ UNLOCK TABLES;
 --
 USE `iotbrokerdb`;
 DROP USER IF EXISTS 'developerUser' @'localhost';
-CREATE USER 'developerUser' @'localhost' IDENTIFIED BY 'hFRfjCptDik9RQHH';
+CREATE USER 'developerUser' @'localhost' IDENTIFIED WITH mysql_native_password BY 'hFRfjCptDik9RQHH';
 GRANT ALL ON `iotbrokerdb`.* TO 'developerUser' @'localhost';
 DROP USER IF EXISTS 'webuser' @'localhost';
-CREATE USER 'webuser' @'localhost' IDENTIFIED by 'hFRfjCptDik9RQHH';
+CREATE USER 'webuser' @'localhost' IDENTIFIED WITH mysql_native_password BY 'hFRfjCptDik9RQHH';
 GRANT SELECT,
   INSERT,
   UPDATE,
