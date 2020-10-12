@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/logo.png">
 
-    <!-- 
-        <script src="js/classes.js"></script>   
-    <script src="js/create_new_card.js"></script> 
-    -->
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/graph.js"></script>   
+   
     <title>Dashboard</title>
 </head>
 <body>
@@ -32,7 +30,7 @@
             //-- added cards through php
             ////////////////////////////////////////
             -->
-            <?php include 'php/tester.php';?>
+            <?php include 'php/get_cards.php';?>
 
 
 
@@ -86,25 +84,14 @@
             -->
     <section class="section-popup">
 
-
         <div class="popup" id="popup">
             <div class="popup__content">
                 <div class="popup__top">
-
+                <canvas id="myChart" class="chart"></canvas>
                 </div>
 
                 <div class="popup__bottom">
                     <a href="#section-card" class="popup__close">&times;</a>
-                    <p class="popup__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Laudantium, ipsam? Quae voluptatem, aspernatur quidem magnam suscipit expedita temporibus illum
-                        consequuntur,
-                        eligendi repellendus fugit labore ducimus atque sint. Corrupti,
-                        temporibus quo.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Assumenda, vero! Nam quis deleniti corporis debitis incidunt est quia?
-                        Tempora placeat iusto atque quaerat fugiat exercitationem non eius minima veniam tempore?
-                    </p>
                 </div>
             </div>
         </div>
@@ -124,7 +111,7 @@
                 <div class="popup__bottom">
                     <a href="#section-card" class="popup__close">&times;</a>
 
-                    <form action="#" class="popup__form">
+                    <form action="php/send_to_db.php" method="POST" class="popup__form">
                         <label class="popup__form__label" for="name">Name:</label>
                         <input class="popup__form__input" type="text" name="name">
 
@@ -140,6 +127,7 @@
 
                         </select>
 
+                        <input class="popup__form__submit" name="action" type="hidden" value="insert">
                         <input class="popup__form__submit" type="submit" value="Submit">
                     </form>
                 </div>
@@ -147,8 +135,6 @@
         </div>
 
     </section>
-
-
 </body>
 
 </html>

@@ -38,36 +38,11 @@
     }
 
     &__top{
-        height: 33.333333%;
+        height: 33.33333%;
         display: table-cell;
     }
 
-    &__bottom{
-        height: 66.666667%;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 3rem 5rem;
-    }
 
-
-    &__text{
-        font-size: 1.4rem;
-        margin-bottom: 4rem;
-
-        -moz-column-count: 2;
-        -moz-column-gap: 4rem;
-        -moz-column-rule: 1px solid $color-grey-dark-2;
-
-        column-count: 2;
-        column-gap: 4rem; //default is 1em = 14px = font size of element
-        column-rule: 1px solid $color-grey-dark-2;
-
-        //for this to work set the <!DOCTYPE html> <html lang="en"> to the right language
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-    }
 
     &__close{
         &:link,
