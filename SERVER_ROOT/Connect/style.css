@@ -1,0 +1,225 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url(images/hero.jpg) no-repeat;
+  background-size: cover;
+}
+.login-box{
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+}
+.login-box h1{
+  float: left;
+  font-size: 40px;
+  border-bottom: 6px solid #4caf50;
+  margin-bottom: 50px;
+  padding: 13px 0;
+}
+.textbox{
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #4caf50;
+}
+.textbox i{
+  width: 26px;
+  float: left;
+  text-align: center;
+}
+.textbox input{
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+}
+.btn{
+  width: 100%;
+  background: none;
+  border: 2px solid #4caf50;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+main {
+	font-family: "Heebo", sans-serif;
+}
+
+.landing {
+	min-height: 100vh;
+	background: url("./hero.jpg");
+	background-size: cover;
+	padding: 0rem 5rem;
+}
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 10vh;
+}
+.logo {
+	position: relative;
+	width: 5vh;
+	height: auto;
+}
+a {
+	position: relative;
+	padding: 10px 12px;
+	text-decoration: none;
+	color: rgb(224, 0, 32);
+	font-size: 2vh;
+	text-transform: uppercase;
+	font-family: "Heebo", sans-serif;
+	letter-spacing: 3px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, .1);
+	box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+a:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255, 255, 255, .1);
+}
+a:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+	transition: 0.5s;
+}
+a:hover:after {
+	left: 100%;
+}
+a span {
+	position: absolute;
+	display: block;
+	transition: 0.5s ease;
+}
+a span:nth-child(1) {
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background: #fff;
+}
+
+a:hover span:nth-child(1) {
+	width: 100%;
+	transform: translateX(100%);
+}
+
+a span:nth-child(2) {
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 0;
+	background: #fff;
+}
+
+a:hover span:nth-child(2) {
+	height: 100%;
+	transform: translateY(100%);
+}
+a span:nth-child(3) {
+	bottom: 0;
+	right: 0;
+	width: 0;
+	height: 1px;
+	background: #fff;
+}
+
+a:hover span:nth-child(3) {
+	width: 100%;
+	transform: translateX(-100%);
+}
+a span:nth-child(4) {
+	bottom: 0;
+	right: 0;
+	width: 1px;
+	height: 0;
+	background: #fff;
+}
+
+a:hover span:nth-child(4) {
+	height: 100%;
+	transform: translateY(-100%);
+}
+
+#logo {
+	font-family: "Lobster", cursive;
+	font-weight: lighter;
+	font-size: 2rem;
+}
+
+.big-text {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	font-size: 5rem;
+	font-family: "Lobster", cursive;
+	color: rgb(61, 61, 61);
+}
+
+.intro {
+	background: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slider {
+	background: rgb(78, 74, 74);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100%);
+}
+
+.intro-text {
+	color: rgb(233, 233, 233);
+	font-family: "Heebo", sans-serif;
+	font-size: 3rem;
+}
+
+.hide {
+	background: black;
+	overflow: hidden;
+}
+
+.hide span {
+	transform: translateY(100%);
+	display: inline-block;
+}
