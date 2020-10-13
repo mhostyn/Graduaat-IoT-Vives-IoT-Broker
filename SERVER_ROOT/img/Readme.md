@@ -1,1 +1,1 @@
-# Voorbeeldlocatie voor het plaatsen van immages
+# Voorbeeldlocatie voor het plaatsen van images
