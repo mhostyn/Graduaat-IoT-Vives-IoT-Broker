@@ -1,8 +1,4 @@
-# Deel 5 – Login gebruiker
-
-## Doel 1
-
-Uw uitleg
+# Login gebruiker
 
 ```php
 <?php
@@ -72,12 +68,4 @@ if(isset($_POST['submit'])) {
 </html>
 ```
 
-## Doel 2
-
-Link naar extra info
-
-[link](/README.md)
-
----
-
-[Home](/README.md)
+[Readme](/README.md)
