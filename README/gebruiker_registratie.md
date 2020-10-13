@@ -1,9 +1,5 @@
 # Deel 4 – Registratie gebruiker
 
-## Doel 1
-
-Uw uitleg
-
 ```php
 <?php
 $error = NULL;
@@ -126,12 +122,5 @@ if(isset($_POST['submit'])){
 </html>
 ```
 
-## Doel 2
 
-Link naar extra info
-
-[link](/README.md)
-
----
-
-[Home](/README.md)
+[Readme](/README.md)
