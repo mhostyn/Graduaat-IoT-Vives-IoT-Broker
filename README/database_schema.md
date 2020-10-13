@@ -1,6 +1,6 @@
 # Vives IoT Broker
 
-## Database Scheme
+## Database Schema
 
 ---
 
@@ -54,6 +54,4 @@ De tabel Data
 
 ---
 
-[Deel 2 – Opzetten database](./Readme.md)
-
-[Home](/README.md)
+[Readme](/README.md)
