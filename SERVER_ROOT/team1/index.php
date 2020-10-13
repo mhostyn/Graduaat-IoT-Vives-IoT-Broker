@@ -7,6 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="shortcut icon" type="image/png" href="img/logo.png">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -136,5 +137,10 @@
 
     </section>
 </body>
+
+
+<li></li>
+<li class="lijst"></li>
+<li id="opsomming"></li>
 
 </html>
