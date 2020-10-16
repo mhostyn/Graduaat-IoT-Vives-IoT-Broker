@@ -1,30 +1,7 @@
 window.addEventListener('load', function(){
 
 ////////GET VARIABLES
-async function getPhpData(){
-    let response = await fetch(`http://localhost/web-programming/kwartaal_5/sensor_dashboard/php/send_values_to_js.php`);
-    let json = await response.json();
-
-    var values = [];
-    var keys = [];
-
-    for (var i in json){
-        keys.push(i);
-        values.push(json[i].value);
-    }
-
-
-
-    let myChart = document.getElementById('myChart').getContext('2d');
-
-    let massPopChart = new Chart(myChart, {
-        type: 'line', //bar, horizontalbar, pie, line, donut, radar, polararea
-        data: {
-            labels: keys,
-
-            datasets: [{
-                label: 'Hide labels',
-                data: values,
+asyn
                 backgroundColor: 'rgba(248, 161, 47, 0.7)',
                 borderWidth: 1,
                 borderColor: 'rgba(248, 161, 47, 0.7)',
