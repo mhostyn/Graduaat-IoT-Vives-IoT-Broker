@@ -24,6 +24,8 @@ class CardDisplayer{
         //---|BUILD A CARD IN THE CONSTRUCTOR FUNCTION WICH WILL BE DISPLAYED
         $cards = new CardsBuilder();
         $this->cards = $cards->build();
+
+        // var_dump(end($this->cards->tableValues[1]));
     }
 
     function displayCards(){

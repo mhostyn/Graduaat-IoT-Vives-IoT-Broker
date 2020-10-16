@@ -7,9 +7,11 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../css/base.css">
     <link rel="shortcut icon" type="image/png" href="img/logo.png">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/graph.js"></script>   
    
@@ -117,7 +119,12 @@
                         <input class="popup__form__input" type="text" name="name">
 
                         <label class="popup__form__label" for="type">Type:</label>
-                        <input class="popup__form__input" type="text" name="type">
+                        <select class="popup__form__selector" name="type">
+                            <option class="popup__form__option" value="celcius">Pressure</option>
+                            <option class="popup__form__option" value="Farenheit">Humidity</option>
+                            <option class="popup__form__option" value="liter">Proximity</option>
+                            <option class="popup__form__option" value="bar">BaTemperaturer</option>
+                        </select>
 
                         <label class="popup__form__label" for="unit">Unit:</label>
                         <select class="popup__form__selector" name="unit">
@@ -125,7 +132,6 @@
                             <option class="popup__form__option" value="Farenheit">Fahrenheit</option>
                             <option class="popup__form__option" value="liter">L</option>
                             <option class="popup__form__option" value="bar">Bar</option>
-
                         </select>
 
                         <input class="popup__form__submit" name="action" type="hidden" value="insert">
@@ -137,10 +143,5 @@
 
     </section>
 </body>
-
-
-<li></li>
-<li class="lijst"></li>
-<li id="opsomming"></li>
 
 </html>

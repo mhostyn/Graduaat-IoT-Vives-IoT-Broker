@@ -40,6 +40,14 @@
     &__top{
         height: 33.33333%;
         display: table-cell;
+        margin-top: 25%;
+    }
+
+    &__bottom{
+        height: 66.6666667%;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+        display: table-cell;
     }
 
 
@@ -59,6 +67,32 @@
 
             &:hover{
                 color: $color-primary;
+            }
+
+            &--delete{
+                color: $color-primary;
+                position: relative;
+                top: -10rem;
+                left: -5rem;
+                background-color: rgba($color-white, 0.75);
+                border-radius: 5%;
+                border: none;
+                transition: all 0.3s;
+
+                &:hover{
+                    transform: translateY(-3px);
+                    transform: scale(1.3);
+                    color: red;
+                }
+
+                &:active,
+                :focus,
+                :visited{
+                    border: none;
+                    outline: none;
+                    transform: translateY(3px);
+                    transform: scale(1);
+                }
             }
     }
 
