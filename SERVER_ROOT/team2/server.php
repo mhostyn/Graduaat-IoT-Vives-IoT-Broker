@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
   // form validation: ensure that the form is correctly filled ...
-  // by adding (array_push()) corresponding error unto $errors array
+  // by adding (array_push()) corresponding error ibdlnto $errors array
   if (empty($firstname)) { array_push($errors, "firstname is required"); }
   if (empty($lastname)) {array_push($errors, "lastname is required");}
   if (empty($email)) { array_push($errors, "Email is required"); }
