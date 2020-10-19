@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/t2-style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
       rel="stylesheet"
@@ -15,7 +15,7 @@
     <main>
       <section class="landing">
         <nav>
-          <img class="logo" src="img/Logo-VIVES.png" alt="">
+          <img class="logo" src="images/Logo-VIVES.png" alt="">
           <h1 id="logo">IoT Broker</h1>
             <a href="register.php"> Register </a>
             <a href="login.php"> Log in </a>
@@ -73,7 +73,7 @@
       integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
       crossorigin="anonymous"
     ></script>
-    <script src="js/app.js"></script>
+    <script src="./app.js"></script>
   </body>
   <footer href="vivesinternetofthings.wordpress.com"> Onze Wordpresspagina </footer>
 </html>
