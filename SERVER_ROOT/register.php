@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <title>Register | Connect.</title>
-    <link rel="stylesheet" href="css/t2-style.css">
+    <link rel="stylesheet" href="./css/t2-style.css">
   </head>
   <body class="register-body">
   <nav class="navbar">

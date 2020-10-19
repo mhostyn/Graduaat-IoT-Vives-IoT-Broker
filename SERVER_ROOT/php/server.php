@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
   	mysqli_query($db, $query);
   	$_SESSION['firstname'] = $firstname;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: index.php');
+  	header('location: index.html');
   }
 
   // Load Composer's autoloader
