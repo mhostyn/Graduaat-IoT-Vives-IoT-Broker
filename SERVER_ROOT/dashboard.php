@@ -15,11 +15,12 @@
         
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/graph.js"></script>   
+    <script src="js/menus.js"></script>   
    
     <title>Dashboard</title>
 </head>
 <body>
-
+        <?php include 'php/test_session.php';?>
     <header>
     </header>
 
@@ -120,21 +121,24 @@
                         <input class="popup__form__input" type="text" name="name">
 
                         <label class="popup__form__label" for="type">Type:</label>
-                        <select class="popup__form__selector" name="type">
-                            <option class="popup__form__option" value="celcius">Pressure</option>
-                            <option class="popup__form__option" value="Farenheit">Humidity</option>
-                            <option class="popup__form__option" value="liter">Proximity</option>
-                            <option class="popup__form__option" value="bar">BaTemperaturer</option>
+                        <select class="popup__form__selector selector" name="type">
+                            <option class="popup__form__option" value="Temprature">Celcius</option>
+                            <option class="popup__form__option" value="Temprature">Farenheit</option>
+                            <option class="popup__form__option" value="liter">Volume</option>
+                            <option class="popup__form__option" value="bar">Pressure</option>
                         </select>
 
+                        <label class="popup__form__label_unit">Unit:</label>
+
+<!--
                         <label class="popup__form__label" for="unit">Unit:</label>
-                        <select class="popup__form__selector" name="unit">
+                        <select class="popup__form__selector selection" name="unit">
                             <option class="popup__form__option" value="celcius">°C</option>
                             <option class="popup__form__option" value="Farenheit">Fahrenheit</option>
                             <option class="popup__form__option" value="liter">L</option>
                             <option class="popup__form__option" value="bar">Bar</option>
                         </select>
-
+-->
                         <input class="popup__form__submit" name="action" type="hidden" value="insert">
                         <input class="popup__form__submit" type="submit" value="Submit">
                     </form>
