@@ -1,8 +1,17 @@
 <?php
-define("DB_SERVER", "localhost");
-define("DB_USER", "develeporsUser");
-define("DB_PASS", "hFRfjCptDik9RQHH");
-define("DB_NAME", "developersDashboard");
+    // de database login gegevens
+    
+    $dbhost = 'localhost';
+    $dbuser = 'webuser';
+    $dbpass = 'hFRfjCptDik9RQHH';
+    $dbname = 'iotBrokerDB';
+
+
+
+define("DB_SERVER", $dbhost);
+define("DB_USER", $dbuser);
+define("DB_PASS", $dbpass);
+define("DB_NAME", $dbname);
 
 
 
