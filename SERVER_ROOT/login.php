@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <title>Login | Connect.</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/t1-style.css">
   </head>
   <body class="login-body">
   <nav class="navbar">

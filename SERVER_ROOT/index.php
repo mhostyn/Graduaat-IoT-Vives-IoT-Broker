@@ -1,23 +1,10 @@
-<?php 
-  session_start(); 
-
-  if (!isset($_SESSION['username'])) {
-  	$_SESSION['msg'] = "You must log in first";
-  	header('location: login.php');
-  }
-  if (isset($_GET['logout'])) {
-  	session_destroy();
-  	unset($_SESSION['username']);
-  	header("location: login.php");
-  }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="css/t2-style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
       rel="stylesheet"
@@ -28,7 +15,7 @@
     <main>
       <section class="landing">
         <nav>
-          <img class="logo" src="images/Logo-VIVES.png" alt="">
+          <img class="logo" src="img/Logo-VIVES.png" alt="">
           <h1 id="logo">IoT Broker</h1>
             <a href="register.php"> Register </a>
             <a href="login.php"> Log in </a>
@@ -51,8 +38,8 @@
         <?php endif ?>
 
         <!-- logged in user information -->
-        <?php  if (isset($_SESSION['username'])) : ?>
-          <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+        <?php  if (isset($_SESSION['firstname'])) : ?>
+          <p>Welcome <strong><?php echo $_SESSION['firstname']; ?></strong></p>
           <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
         <?php endif ?>
       </div>
@@ -86,7 +73,7 @@
       integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
       crossorigin="anonymous"
     ></script>
-    <script src="./app.js"></script>
+    <script src="js/app.js"></script>
   </body>
   <footer href="vivesinternetofthings.wordpress.com"> Onze Wordpresspagina </footer>
 </html>
