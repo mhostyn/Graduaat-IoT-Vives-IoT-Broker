@@ -4,7 +4,7 @@ require_once('functions.php');
 class CardsBuilder{
     function __construct(){
         //---|CREATE AL YOUR QUERYS IN HERE
-        include 'create_querys.php';
+        include 'db_create_queries.php';
     }
 
     //---|CREATE A FUNCTION THAT SETS A VALUES OF THE CARD OBJECT (PARAM IS EQUAL TO A SQL-QUERY)
