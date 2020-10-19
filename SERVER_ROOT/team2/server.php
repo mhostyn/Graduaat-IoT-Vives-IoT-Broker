@@ -1,4 +1,9 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 session_start();
 
 // initializing variables
@@ -26,7 +31,7 @@ if (isset($_POST['submit'])) {
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
   // form validation: ensure that the form is correctly filled ...
-  // by adding (array_push()) corresponding error unto $errors array
+  // by adding (array_push()) corresponding error ibdlnto $errors array
   if (empty($firstname)) { array_push($errors, "firstname is required"); }
   if (empty($lastname)) {array_push($errors, "lastname is required");}
   if (empty($email)) { array_push($errors, "Email is required"); }
@@ -59,6 +64,43 @@ if (isset($_POST['submit'])) {
   	$_SESSION['firstname'] = $firstname;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: index.php');
+  }
+
+  // Load Composer's autoloader
+  require 'vendor/autoload.php';
+
+  // Instantiation and passing `true` enables exceptions
+  $mail = new PHPMailer(true);
+
+  $recipient = $email;
+
+  try {
+    //Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    $mail->isSMTP();                                            // Send using SMTP
+    $mail->Host       = 'smtp.sendgrid.net';                    // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'iot.broker.vives@gmail.com';           // SMTP username
+    $mail->Password   = 'Vives2020**********';                  // SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    
+
+    //Recipients
+    $mail->setFrom('iot.broker.vives@gmail.com', 'Iot Broker Vives');
+    $mail->addAddress($recipient);     // Who's the recipient?
+    $body = '<p><strong>Hello</strong> this is my first email with phpmailer 2</p>';
+
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = $body;
+    $mail->AltBody = strip_tags($body);                   // Backup so that the recipient sees something when HTML doesn't work for some reason
+
+    $mail->send();
+    echo 'Message has been sent';
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
 }
 
