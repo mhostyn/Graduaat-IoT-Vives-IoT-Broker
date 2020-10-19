@@ -109,7 +109,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Joske','Vermeulen','paswoord','em1','aa6c05c0-8709-4c4c-abc0-dbc3409cc745','d34db33f-1111-1111-1111-1111d34db33f','verified','2020-10-11 00:30:17'),(2,'Wesley','Kabouter','paswoord','em2','6447c1a4-c3c1-4584-bf76-6af46ca86310','d34db33f-2222-2222-2222-2222d34db33f','verified','2020-10-11 00:30:17');
+INSERT INTO `user` VALUES (1,'Joske','Vermeulen','26d01f0b3dcd7cbddb2de08c3a95a740','joskev@e.mail','aa6c05c0-8709-4c4c-abc0-dbc3409cc745','d34db33f-1111-1111-1111-1111d34db33f','verified','2020-10-11 00:30:17'),(2,'Wesley','Kabouter','26d01f0b3dcd7cbddb2de08c3a95a740','kabouterw@e.mail','6447c1a4-c3c1-4584-bf76-6af46ca86310','d34db33f-2222-2222-2222-2222d34db33f','verified','2020-10-11 00:30:17');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
