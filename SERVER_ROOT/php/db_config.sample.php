@@ -13,4 +13,9 @@
     $dbuser = 'webuser';
     $dbpass = 'hFRfjCptDik9RQHH';
     $dbname = 'iotBrokerDB';
+
+    define("DB_SERVER", $dbhost);
+    define("DB_USER",  $dbuser);
+    define("DB_PASS", $dbpass);
+    define("DB_NAME", $dbname);
 ?>
