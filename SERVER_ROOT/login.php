@@ -1,4 +1,4 @@
-<?php include ('server.php') ?>
+<?php include ('php/server.php') ?>
 
 <!DOCTYPE html>
 <html class="login-html" lang="en" dir="ltr">

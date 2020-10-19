@@ -13,10 +13,8 @@ $email    = "";
 $errors = array(); 
 
 //database login
-$dbhost = 'localhost';
-$dbuser = 'webuser';
-$dbpass = 'hFRfjCptDik9RQHH';
-$dbname = 'iotbrokerdb';
+require_once('db_config.php');
+
 
 // connect to the database
 $db = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
