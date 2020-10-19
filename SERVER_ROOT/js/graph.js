@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
 
         async function getPhpData() {
 
-            let response = await fetch(`http://localhost/team1/php/send_values_to_js.php?` + new URLSearchParams({
+            let response = await fetch(`php/send_values_to_js.php?` + new URLSearchParams({
                 sensor_id: `${sensor_id}`
             }));
             let json = await response.json();
