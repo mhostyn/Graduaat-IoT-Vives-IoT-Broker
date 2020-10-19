@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/t1-style.css">
-    <link rel="shortcut icon" type="image/png" href="img/logo.png">
+    <link rel="shortcut icon" type="image/png" href="img/guage-logo.png">
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

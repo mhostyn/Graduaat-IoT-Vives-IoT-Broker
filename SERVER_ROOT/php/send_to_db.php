@@ -20,6 +20,6 @@ require_once('functions.php');
           };
 
           //--|REDIRECT
-        redirect_to('../index.php');
+        redirect_to('../dashboard.php');
 
 ?>

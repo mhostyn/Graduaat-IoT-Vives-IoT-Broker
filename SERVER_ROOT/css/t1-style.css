@@ -69,7 +69,7 @@ body {
     .card__picture--1 {
       background-color: #e40b14; }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #e40b14, #e40b14), url(../../img/logo.png); }
+      background-image: linear-gradient(to right bottom, #e40b14, #e40b14), url(../img/guage-logo.png); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
