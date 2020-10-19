@@ -1,4 +1,4 @@
-<?php include ('server.php') ?>
+<?php include ('php/server.php') ?>
 
 <!DOCTYPE html>
 <html class="register-html" lang="en" dir="ltr">
@@ -25,7 +25,7 @@
     <div class="wrapper">
       <div class="title">Register Form</div>
       <form method="POST" action="register.php">
-      <?php include('errors.php');?>
+      <?php include('php/errors.php');?>
         <!-- Firstname -->
         <div class="field">
         <input type="TEXT" name="firstname" required/>

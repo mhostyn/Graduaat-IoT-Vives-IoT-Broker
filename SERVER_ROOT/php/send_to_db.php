@@ -11,7 +11,7 @@ require_once('functions.php');
             $unit=mysqli_real_escape_string($connection,$_POST['unit']);
             
             //--|QUERY
-            $insert = "INSERT INTO sensor (name, type, unit, user_id) VALUES ('{$name}','{$type}','{$unit}', '2');";
+            $insert = "INSERT INTO sensor (name, type, unit, user_id) VALUES ('{$name}','{$type}','{$unit}', '1');";
             //--|PERFORM QUERY
             mysqli_query($connection,$insert);
 
