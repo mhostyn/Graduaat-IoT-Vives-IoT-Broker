@@ -1,5 +1,5 @@
 <?php
-require_once('db_initiate.php');
+require_once('db_config.php');
 
 ////////////////////////////////////////////////////////////////////////PHP
 function is_post_request(){
