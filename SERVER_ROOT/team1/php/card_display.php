@@ -46,21 +46,14 @@
             <table class="card__table">
             ';
 
-         foreach($this->cards->tableValues[$cardIndex] as $value){
+         foreach($this->cards->tableValues[$cardIndex] as $key => $value){
             echo '
                 <tr class="card__table__tr">
                 <td class="card__table__td__value"> Value: '.$value["value"].' </td>
+                <td class="card__table__td__value"> Id: '.$this->cards->tableIds[$cardIndex][$key]["data_id"].' </td>
                 </tr>
             ';
         }
-            foreach($this->cards->tableIds[$cardIndex] as $value){
-                echo'
-                <tr class="card__table__tr">
-                <td class="card__table__td__value"> Id: '.$value["data_id"].'</td>
-                </tr>
-                ';
-         }
-
          echo '  
          </table>
             </div>
