@@ -46,22 +46,19 @@
             <table class="card__table">
             ';
 
-
-         foreach($this->cards->tableValues[$cardIndex] as $value){
+         foreach($this->cards->tableValues[$cardIndex] as $key => $value){
             echo '
                 <tr class="card__table__tr">
+                <form action="php/delete.php" method="POST">
+                <input type="hidden" name="action" value="deleteButton" />
+                <input type="hidden" name="data_id" value='.$this->cards->tableIds[$cardIndex][$key]["data_id"].'/>
+
                 <td class="card__table__td__value"> Value: '.$value["value"].' </td>
+                <td class="card__table__td__value">Id: '.$this->cards->tableIds[$cardIndex][$key]["data_id"].' <input type="submit" value="Del"/></td>
+                </form>
                 </tr>
             ';
         }
-            foreach($this->cards->tableIds[$cardIndex] as $value){
-                echo'
-                <tr class="card__table__tr">
-                <td class="card__table__td__value"> Id: '.$value["data_id"].'</td>
-                </tr>
-                ';
-         }
-
          echo '  
          </table>
             </div>
