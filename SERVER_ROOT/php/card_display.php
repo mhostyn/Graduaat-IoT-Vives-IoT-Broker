@@ -46,6 +46,7 @@
             <table class="card__table">
             ';
 
+
          foreach($this->cards->tableValues[$cardIndex] as $value){
             echo '
                 <tr class="card__table__tr">
