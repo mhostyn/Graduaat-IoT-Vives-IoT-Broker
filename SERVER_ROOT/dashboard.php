@@ -118,6 +118,8 @@
                     <form action="php/send_to_db.php" method="POST" class="popup__form">
                         <label class="popup__form__label" for="name">Name:</label>
                         <input class="popup__form__input" type="text" name="name">
+                        <label class="popup__form__label" for="api">Api-key:</label>
+                        <input class="popup__form__input" type="text" name="api">
 
                         <label class="popup__form__label" for="type">Type:</label>
                         <select class="popup__form__selector selector" name="type">
