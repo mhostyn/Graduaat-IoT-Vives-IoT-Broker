@@ -16,12 +16,21 @@ $connection = db_connect();
                 mysqli_query($connection, $delete_data);
                 mysqli_query($connection, $delete_sensor);
         }
+
+        if($_POST["action"]=='deleteButton'){
+                 //--|REMOVE "/" FROM $_POST
+                 $data_id = rtrim($_POST["data_id"], "/");
+                 //--|BUILD QUERY
+                 $delete_data_id = "DELETE FROM data WHERE data_id ={$data_id}; ";
+                 //--|PERFORM QUERY
+                 mysqli_query($connection, $delete_data_id);
+        }
 }
 //--|CLOSE CONNECTION
 db_disconnect($connection);
 
 //--|REDIRECT
-redirect_to('dashboard.php');
+redirect_to('../index.php');
 
 //--|TELL CHROME THIS IS THE END OF THE FILE (GOOD PRACTICE)
 exit();
