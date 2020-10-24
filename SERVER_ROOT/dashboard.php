@@ -19,9 +19,15 @@
     <title>Dashboard</title>
 </head>
 <body>
-        <?php include 'php/test_session.php';?>
     <header>
-    </header>
+        <?php 
+        // include 'header.php';
+        ?>
+     </header>
+    
+        <?php include 'php/test_session.php';?>
+   
+   
 
 
     <main>
