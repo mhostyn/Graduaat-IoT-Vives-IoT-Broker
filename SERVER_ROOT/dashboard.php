@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'php/html_elements.php';?>
 
 <head>
     <meta charset="UTF-8">
@@ -155,5 +156,9 @@
 
     </section>
 </body>
+
+<?php
+echo html_Footer();
+?>
 
 </html>
