@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'php/html_elements.php';?>
 
 <head>
     <meta charset="UTF-8">
@@ -150,8 +151,9 @@
     </section>
 </body>
 <!-- footer section start -->
-<footer>
-    <span>Created By <a href="https://www.vives.be/nl" target="_blank">Vives</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
-</footer>
+
+<?php
+echo html_Footer();
+?>
 
 </html>
