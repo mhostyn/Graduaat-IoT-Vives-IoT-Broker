@@ -35,7 +35,7 @@
         <div class="card__cta">
             <div>
 
-            <form action="php/db_delete_sensor.php" method="POST">
+            <form action="php/delete.php" method="POST">
             <input type="hidden" name="action" value="delete" />
             <input type="hidden" name="sensor_id" value='.$this->cards->values[$cardIndex]["sensor_id"].'/>
             <input class="popup__close--delete" type="submit" value="Delete sensor &#8595"/>
@@ -49,7 +49,7 @@
          foreach($this->cards->tableValues[$cardIndex] as $key => $value){
             echo '
                 <tr class="card__table__tr">
-                <form action="php/db_delete_sensor.php" method="POST">
+                <form action="php/delete.php" method="POST">
                 <input type="hidden" name="action" value="deleteButton" />
                 <input type="hidden" name="data_id" value='.$this->cards->tableIds[$cardIndex][$key]["data_id"].'/>
 
@@ -72,4 +72,5 @@
 </div>
 ';
   }
+
 ?>
