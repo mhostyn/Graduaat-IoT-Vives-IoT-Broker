@@ -1,26 +1,32 @@
-window.addEventListener('load', function(){
-    var selector = document.querySelector('.selector');
+window.addEventListener('DOMContentLoaded', function(){
 
-    selector.addEventListener('click', function(){
+  var selector = document.querySelector('.selector');
 
-            var selectorString = selector.options[selector.selectedIndex].textContent;
-            var selection= document.querySelector('.popup__form__label_unit');
-            
+selector.addEventListener('change', init);
 
-            switch (selectorString) {
-                case 'Celcius':
-                    selection.textContent = "Unit: °C";
-                  break;
-                case 'Farenheit':
-                    selection.textContent = "Unit: °F";
-                  break;
-                case 'Volume':
-                    selection.textContent = "Unit: l";
-                  break;
-                case 'Pressure':
-                    selection.textContent = "Unit: Bar";
-              }
-    })
+function init(){
+
+  var selected = document.querySelector('.selected');
+
+  selection = selector.value;
+
+                switch (selection) {
+                    case 'TempratureC':
+                      selected.options[0].selected = true ;
+                      break;
+
+                    case 'TempratureF':
+                      selected.options[1].selected = true ;
+                      break;
+
+                    case 'liter':
+                      selected.options[2].selected = true ;
+                      break;
+
+                    case 'bar':
+                      selected.options[3].selected = true ;
+                  }
+
+}
+
 });
-
-
