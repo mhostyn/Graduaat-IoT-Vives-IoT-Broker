@@ -125,28 +125,35 @@
                     <form action="php/send_to_db.php" method="POST" class="popup__form">
                         <label class="popup__form__label" for="name">Name:</label>
                         <input class="popup__form__input" type="text" name="name">
-                        <label class="popup__form__label" for="api">Api-key:</label>
-                        <input class="popup__form__input" type="text" name="api">
+
+                        <!-- 
+                            <label class="popup__form__label" for="api">Api-key:</label>
+                            <input class="popup__form__input" type="text" name="api"> 
+                        -->
 
                         <label class="popup__form__label" for="type">Type:</label>
                         <select class="popup__form__selector selector" name="type">
-                            <option class="popup__form__option" value="Temprature">Celcius</option>
-                            <option class="popup__form__option" value="Temprature">Farenheit</option>
-                            <option class="popup__form__option" value="liter">Volume</option>
-                            <option class="popup__form__option" value="bar">Pressure</option>
+                            <option class="popup__form__option selector" value="TempratureC">Celcius</option>
+                            <option class="popup__form__option selector" value="TempratureF">Farenheit</option>
+                            <option class="popup__form__option selector" value="liter">Volume</option>
+                            <option class="popup__form__option selector" value="bar">Pressure</option>
                         </select>
 
-                        <label class="popup__form__label_unit">Unit:</label>
+                        <!-- 
+                            <label class="popup__form__label_unit" for="unit" value='unit'>Unit:</label>
+                            <input class="popup__form__input" type="hidden" name="unit"> 
+                        -->
 
-<!--
+
+
                         <label class="popup__form__label" for="unit">Unit:</label>
-                        <select class="popup__form__selector selection" name="unit">
+                        <select class="popup__form__selector selected" name="unit">
                             <option class="popup__form__option" value="celcius">°C</option>
                             <option class="popup__form__option" value="Farenheit">Fahrenheit</option>
                             <option class="popup__form__option" value="liter">L</option>
                             <option class="popup__form__option" value="bar">Bar</option>
                         </select>
--->
+
                         <input class="popup__form__submit" name="action" type="hidden" value="insert">
                         <input class="popup__form__submit" type="submit" value="Submit">
                     </form>
