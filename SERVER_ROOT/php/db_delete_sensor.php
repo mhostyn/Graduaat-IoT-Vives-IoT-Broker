@@ -8,7 +8,7 @@ $connection = db_connect();
  if(is_post_request()) {
         if($_POST["action"]=='delete'){
                 //--|REMOVE "/" FROM $_POST
-                $sensor_id = rtrim($_POST["sensor_id"], "/");
+                $sensor_id = db_escape(rtrim($_POST["sensor_id"]), "/");
                 //--|BUILD QUERY
                 $delete_data = "DELETE FROM data WHERE sensor_id ={$sensor_id}; ";
                 $delete_sensor = "DELETE FROM sensor WHERE sensor_id={$sensor_id}; ";
@@ -19,7 +19,7 @@ $connection = db_connect();
 
         if($_POST["action"]=='deleteButton'){
                  //--|REMOVE "/" FROM $_POST
-                 $data_id = rtrim($_POST["data_id"], "/");
+                 $data_id = db_escape(rtrim($_POST["data_id"]), "/");
                  //--|BUILD QUERY
                  $delete_data_id = "DELETE FROM data WHERE data_id ={$data_id}; ";
                  //--|PERFORM QUERY
@@ -30,7 +30,7 @@ $connection = db_connect();
 db_disconnect($connection);
 
 //--|REDIRECT
-redirect_to('../dashboard.php');
+redirect_to('../index.php');
 
 //--|TELL CHROME THIS IS THE END OF THE FILE (GOOD PRACTICE)
 exit();
