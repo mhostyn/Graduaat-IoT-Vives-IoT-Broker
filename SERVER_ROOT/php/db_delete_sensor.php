@@ -30,7 +30,7 @@ $connection = db_connect();
 db_disconnect($connection);
 
 //--|REDIRECT
-redirect_to('../index.php');
+redirect_to('../dashboard.php');
 
 //--|TELL CHROME THIS IS THE END OF THE FILE (GOOD PRACTICE)
 exit();
