@@ -6,12 +6,16 @@ require_once('functions.php');
           //--|HANDE POST REQUESTS
         if(is_post_request())
         {
-            $name=mysqli_real_escape_string($connection,$_POST['name']);
-            $type=mysqli_real_escape_string($connection,$_POST['type']);
-            $unit=mysqli_real_escape_string($connection,$_POST['unit']);
+            $name= db_escape($connection,$_POST['name']);
+            $type= db_escape($connection,$_POST['type']);
+            $unit= db_escape($connection,$_POST['unit']);
             
+
+            $userId = $_SESSION["user_id"];
             //--|QUERY
-            $insert = "INSERT INTO sensor (name, type, unit, user_id) VALUES ('{$name}','{$type}','{$unit}', '1');";
+            //--|USE LINE 17 WHEN TEAM 2 FINISHED SESSION FILE
+            // $insert = "INSERT INTO sensor (name, type, unit, user_id) VALUES ('{$name}','{$type}','{$unit}', '{$userId}');";
+            $insert = "INSERT INTO sensor (name, type, unit, user_id) VALUES ('{$name}','{$type}','{$unit}', '2');";
             //--|PERFORM QUERY
             mysqli_query($connection,$insert);
 
