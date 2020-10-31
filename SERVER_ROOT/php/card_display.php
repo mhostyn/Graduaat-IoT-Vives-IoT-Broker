@@ -36,8 +36,8 @@ for ($cardIndex = 0; $cardIndex <= ($numberOfCards - 1); $cardIndex++) {
        <div class="card__cta">
            <div>
 
-           <form action="php/delete.php" method="POST">
-           <input type="hidden" name="action" value="delete" />
+           <form action="php/db_delete_sensor.php" method="POST">
+           <input type="hidden" name="action" value="delete_sensor" />
            <input type="hidden" name="sensor_id" value='.html($this->cards->values[$cardIndex]["sensor_id"]).'/>
            <input class="popup__close--delete__sensor" type="submit" value="Delete sensor &#8595"/>
            </form>
@@ -50,8 +50,8 @@ for ($cardIndex = 0; $cardIndex <= ($numberOfCards - 1); $cardIndex++) {
         foreach($this->cards->tableValues[$cardIndex] as $key => $value){
            echo '
                <tr class="card__table__tr">
-               <form action="php/delete.php" method="POST">
-               <input type="hidden" name="action" value="deleteButton" />
+               <form action="php/db_delete_sensor.php" method="POST">
+               <input type="hidden" name="action" value="delete_data" />
                <input type="hidden" name="data_id" value='.html($this->cards->tableIds[$cardIndex][$key]["data_id"]).'/>
                <td class="card__table__td__value"> Value: '.html($value["value"]).' </td>
                <td class="card__table__td__value">Id: '.html($this->cards->tableIds[$cardIndex][$key]["data_id"]).' <input class="popup__close--delete__data" type="submit" value="Del"/></td>
