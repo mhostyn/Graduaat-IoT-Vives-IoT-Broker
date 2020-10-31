@@ -5,6 +5,15 @@ $html_element = "";
 
 function get_html_header_code() {
 
+  
+  /*
+  IF SESSION
+
+  HELLO firstname
+  LOGOUT
+  
+  */  
+
     $html_element = '
     
     <!-- Navbar start -->
@@ -43,6 +52,15 @@ function get_html_header_code() {
     <!-- Navbar end -->
 
     ';
+
+  /*
+  IF NOT SESSION
+
+  HELLO
+   - LOGIN
+   - REGISTER
+
+  */  
 
     echo $html_element;
 }
