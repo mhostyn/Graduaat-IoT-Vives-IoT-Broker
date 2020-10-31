@@ -12,6 +12,11 @@ if($email == false){
     <title>Create a New Password | Connect.</title>
     <link rel="stylesheet" href="css/formStyle.css">
 </head>
+
+<?php 
+/* include_once "php/html_elements.php"; get_html_header_code(); */
+?>
+
 <body>
     <div class="container">
         <div class="row">
@@ -42,4 +47,9 @@ if($email == false){
         </div>
     </div>
 </body>
+
+    <?php 
+    /* include_once "php/html_elements.php"; get_html_footer_code(); */
+    ?>
+
 </html>

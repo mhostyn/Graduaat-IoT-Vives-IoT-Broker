@@ -7,8 +7,6 @@ function get_html_header_code() {
 
     $html_element = '
     
-    <link rel="stylesheet" href="css/style.css">
-
     <!-- Navbar start -->
       <header>
         <nav class="navbar">
@@ -54,13 +52,11 @@ function get_html_footer_code() {
     //dit eenmaal wijzigen om data in te plooien
     $html_element = '
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Navbar start -->
+    <!-- footer start -->
       <footer>
         <span>Created By <a href="https://www.vives.be/nl" target="_blank">Vives</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
       </footer>
-    <!-- Navbar start -->
+    <!-- footer start -->
 
     ';
 

@@ -8,7 +8,7 @@
     </head>
     <body>
         
-    <?php include "php/html_elements.php"; get_html_navbar_code(); ?>
+    <?php include_once "php/html_elements.php"; get_html_header_code(); ?>
 
         <!-- Signup form start -->
         <div class="container">
@@ -43,5 +43,11 @@
                 </div>
             </div>
         </div>
+
+        <?php
+        /* include_once "php/html_elements.php"; get_html_footer_code(); */
+        ?>
     </body>
+
+
 </html>

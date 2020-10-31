@@ -7,15 +7,10 @@
     <title>Signup Form | Connect.</title>
     <link rel="stylesheet" href="css/formStyle.css">
 </head>
+
+<?php include_once "php/html_elements.php"; get_html_header_code(); ?>
+
 <body>
-    <!-- Navbar start -->
-    <nav class="navbar">
-        <div class="max-width">  
-            <div class="logo">
-                <a href="./index.php">IoT <span>Broker.</span></a>
-            </div>
-        </div>
-    </nav>
 
     <!-- Signup form start -->
     <div class="container">
@@ -59,4 +54,7 @@
         </div>
     </div>
 </body>
+
+<?php /* include_once "php/html_elements.php"; get_html_footer_code(); */ ?>
+
 </html>

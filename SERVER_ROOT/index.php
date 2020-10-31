@@ -20,22 +20,9 @@
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
+
     <?php include_once "php/html_elements.php"; get_html_header_code(); ?>
-    <!-- Navbar start 
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo">
-                <a href="./index.php">IoT <span>Broker.</span></a>
-            </div>
-            <ul class="menu">
-                <li><a href="./login-user.php" class="menu-btn">Login</a></li>
-                 <li><a href="./signup-user.php" class="menu-btn">Register</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>-->
+
     <!-- home section start -->
     <section class="home" id="home">
         <div class="max-width">
@@ -218,9 +205,7 @@
         </div>
     </section>
 
-
     <?php include_once "php/html_elements.php"; get_html_footer_code(); ?>
-
 
     <script src="js/app.js"></script>
 </body>

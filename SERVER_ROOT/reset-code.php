@@ -12,6 +12,9 @@ if($email == false){
     <title>Code reset | Connect.</title>
     <link rel="stylesheet" href="css/formStyle.css">
 </head>
+
+<?php /* include_once "php/html_elements.php"; //get_html_header_code(); */ ?>
+
 <body>
     <div class="container">
         <div class="row">
@@ -38,5 +41,6 @@ if($email == false){
             </div>
         </div>
     </div>
+    <?php /* include_once "php/html_elements.php"; //get_html_footer_code(); */ ?>
 </body>
 </html>
