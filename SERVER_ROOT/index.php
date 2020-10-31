@@ -20,7 +20,7 @@
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
-    <?php include "php/html_elements.php"; get_html_navbar_code(); ?>
+    <?php include_once "php/html_elements.php"; get_html_header_code(); ?>
     <!-- Navbar start 
     <nav class="navbar">
         <div class="max-width">
@@ -219,7 +219,7 @@
     </section>
 
 
-    <?php include "php/html_elements.php"; get_html_footer_code(); ?>
+    <?php include_once "php/html_elements.php"; get_html_footer_code(); ?>
 
 
     <script src="js/app.js"></script>

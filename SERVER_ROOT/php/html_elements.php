@@ -7,29 +7,14 @@ function get_html_header_code() {
 
     $html_element = '
     
-    <!-- header start -->
+    <link rel="stylesheet" href="css/style.css">
 
-        <p>
-          
-        </p>
-
-    <!-- header end -->
-    
-    ';
-
-    echo $html_element;
-}
-
-
-function get_html_navbar_code() {
-
-    $html_element = '
-    
     <!-- Navbar start -->
+      <header>
         <nav class="navbar">
           <div class="max-width">
             <div class="logo">
-              <a href="./index.html">
+              <a href="index.php">
                 IoT
                 <span>
                   Broker.
@@ -56,6 +41,7 @@ function get_html_navbar_code() {
             </div>
           </div>
         </nav>
+      </header>
     <!-- Navbar end -->
 
     ';
@@ -68,12 +54,12 @@ function get_html_footer_code() {
     //dit eenmaal wijzigen om data in te plooien
     $html_element = '
 
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Navbar start -->
-
-        <footer>
-          <span>Created By <a href="https://www.vives.be/nl" target="_blank">Vives</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
-        </footer>
-
+      <footer>
+        <span>Created By <a href="https://www.vives.be/nl" target="_blank">Vives</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
+      </footer>
     <!-- Navbar start -->
 
     ';
