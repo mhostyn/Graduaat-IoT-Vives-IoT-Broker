@@ -20,7 +20,7 @@
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
-    <?php include "php/html_elements.php"; get_navbar(); ?>
+    <?php include "php/html_elements.php"; get_html_navbar_code(); ?>
     <!-- Navbar start 
     <nav class="navbar">
         <div class="max-width">
@@ -219,10 +219,8 @@
     </section>
 
 
-    <!-- footer section start -->
-    <footer>
-        <span>Created By <a href="https://www.vives.be/nl" target="_blank">Vives</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
-    </footer>
+    <?php include "php/html_elements.php"; get_html_footer_code(); ?>
+
 
     <script src="js/app.js"></script>
 </body>
