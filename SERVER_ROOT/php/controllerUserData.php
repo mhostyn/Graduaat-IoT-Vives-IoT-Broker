@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 session_start();
-require "connection.php";
+require "db_handler.php";
 
 $email = "";            //email of user
 $firstname = "";        //firstname of user

@@ -18,12 +18,40 @@ function html_Footer() {
     return $html_element;
 }
 
-
 function html_Header() {
 
     $html_element = "";
 
     return $html_element;
+}
+
+function get_navbar() {
+
+    $html_element = '
+    
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo">
+            <a href="./index.html">IoT <span>Broker.</span></a>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="menu-btn">Dag <?php echo $fetch_info[\'firstname\']?>!</a>
+                </li>
+                <li>
+                    <a href="./logout.php" class="menu-btn-logout">Logout</a>
+                </li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+    ';
+
+    echo $html_element;
 }
 
 function html_ERROR() {

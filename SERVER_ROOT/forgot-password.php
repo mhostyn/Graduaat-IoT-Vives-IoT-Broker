@@ -1,4 +1,6 @@
-<?php require_once "php/controllerUserData.php"; ?>
+<?php 
+require_once "php/controllerUserData.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,8 @@
     <link rel="stylesheet" href="css/formStyle.css">
 </head>
 <body>
-    <!-- Navbar start -->
+<?php include "php/html_elements.php"; get_navbar(); ?>
+    <!-- Navbar start 
     <nav class="navbar">
         <div class="max-width">
             <div class="logo">
@@ -21,7 +24,8 @@
                 <i class="fas fa-bars"></i>
             </div>
         </div>
-    </nav>
+    </nav>-->
+
     <!-- Signup form start -->
     <div class="container">
         <div class="row">
