@@ -5,23 +5,30 @@ require_once('functions.php');
 $connection = db_connect();
 
 //---|BUILD QUERY
- if(is_post_request()) {
-        if($_POST["action"]=='delete'){
+if(is_post_request()) {
+
+        if($_POST["action"]=='delete_sensor'){
+                
                 //--|REMOVE "/" FROM $_POST
-                $sensor_id = rtrim($_POST["sensor_id"], "/");
+                $sensor_id = db_escape($connection, rtrim($_POST["sensor_id"], "/"));
+                
                 //--|BUILD QUERY
                 $delete_data = "DELETE FROM data WHERE sensor_id ={$sensor_id}; ";
                 $delete_sensor = "DELETE FROM sensor WHERE sensor_id={$sensor_id}; ";
+
                 //--|PERFORM QUERY
                 mysqli_query($connection, $delete_data);
                 mysqli_query($connection, $delete_sensor);
         }
 
-        if($_POST["action"]=='deleteButton'){
+        if($_POST["action"]=='delete_data'){
+
                  //--|REMOVE "/" FROM $_POST
-                 $data_id = rtrim($_POST["data_id"], "/");
+                 $data_id = db_escape($connection, rtrim($_POST["data_id"], "/"));
+
                  //--|BUILD QUERY
                  $delete_data_id = "DELETE FROM data WHERE data_id ={$data_id}; ";
+
                  //--|PERFORM QUERY
                  mysqli_query($connection, $delete_data_id);
         }
