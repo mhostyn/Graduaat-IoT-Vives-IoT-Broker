@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'php/html_elements.php';?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/t1-style.css">
     <link rel="shortcut icon" type="image/png" href="img/guage-logo.png">
 
@@ -19,20 +19,13 @@
    
     <title>Dashboard</title>
 </head>
-<body>
-    <header>
-        <?php 
-        // include 'header.php';
-        ?>
-     </header>
-    
-        <?php include 'php/test_session.php';?>
-   
-   
 
+<?php include_once 'php/html_elements.php'; get_html_header_code(); ?>
+
+<body>
+    <?php include 'php/test_session.php';?>
 
     <main>
-
         <section id="section-card">
 
             <!--  
@@ -42,8 +35,6 @@
             ////////////////////////////////////////
             -->
             <?php include 'php/get_cards.php';?>
-
-
 
             <!--  
             ////////////////////////////////////////
@@ -78,15 +69,7 @@
             </div>
         </section>
     </main>
-
-
-    <footer>
-    </footer>
-
-
-
-
-
+    
     <!--  
             ////////////////////////////////////////
             //-- pop-up section 
@@ -164,8 +147,6 @@
     </section>
 </body>
 
-<?php
-echo html_Footer();
-?>
+<?php include_once 'php/html_elements.php'; get_html_footer_code(); ?>
 
 </html>

@@ -1,4 +1,6 @@
-<?php require_once "php/controllerUserData.php"; ?>
+<?php 
+require_once "php/controllerUserData.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,21 +9,10 @@
     <link rel="stylesheet" href="css/formStyle.css">
 </head>
 <body>
-    <!-- Navbar start -->
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo">
-                <a href="./index.php">IoT <span>Broker.</span></a>
-            </div>
-            <ul class="menu">
-                <li><a href="./login-user.php" class="menu-btn">Login</a></li>
-                 <li><a href="./signup-user.php" class="menu-btn">Register</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+    
+<?php include_once "php/html_elements.php"; get_html_header_code(); ?>
+
+
     <!-- Signup form start -->
     <div class="container">
         <div class="row">
@@ -44,5 +35,8 @@
             </div>
         </div>
     </div>
+    <?php 
+    /* include_once "php/html_elements.php"; get_html_footer_code(); */
+    ?>
 </body>
 </html>
