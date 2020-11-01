@@ -1,23 +1,40 @@
 <?php
-    // de database login gegevens
-    $dbhost = 'localhost';
-    $dbuser = 'webuser';
-    $dbpass = 'hFRfjCptDik9RQHH';
-    $dbname = 'iotbrokerdb';
+$servername = ""; //indien het php bestand en de database beide op dezelfde computer staan.
+$username = "";
+$password = "";  //Gebruik het opgegeven paswoord  
+$dbname = "";     //database naam
 
-    // Verbinden met de database
-    $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+require_once('db_config.php');
 
-    // Is het een POST request?
+//Parameter 1 via GET in variabele waarde plaatsen
+if(isset($_GET["api_key"])){
+    $varWaarde1 = $_GET["Api_key"];
+} 
+else { 			//indien geen parameters opgegeven
+    echo "ERROR no key defined in URL!";
+    die();
+}
+echo $varWaarde1 ;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connection successfully";
+
+
+//querry uitvoeren
     if($_SERVER['REQUEST_METHOD']=='POST')
     {
-        $temp=mysqli_real_escape_string($connection,$_POST['Temp']);
-        $insert = "INSERT INTO sensor (Bewegingssensor 2) 
-        VALUES (now(),'{$lux}');";
+        $Sensorid=mysqli_real_escape_string($connection,$_POST['']);
+        $Lichtsterkte=mysqli_real_escape_string($connection,$_POST['Lux']);
+        $Apikey=mysqli_real_escape_string($connection,$_POST['']);
+        $insert = "INSERT INTO sensor (time_stamp, Sensorid, Lichtsterkte, Apikey) 
+        VALUES (now(),'{$Sensorid}','{$Lichtstrekte}','{$Apikey}');";
          mysqli_query($connection,$insert);
         
     }  
-
-    // De verbinding met de database afsluiten
-    mysqli_close($connection);
+$conn->close();
 ?>
