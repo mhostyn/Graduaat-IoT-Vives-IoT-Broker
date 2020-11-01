@@ -121,7 +121,7 @@ INSERT INTO `sensor` VALUES
 (45,'Hallway','lux','illuminance_lux','2020-10-11 00:30:22',2),
 (46,'Hallway','lqi','linkquality','2020-10-11 00:30:22',2),
 (47,'Hallway','bool','occupancy','2020-10-11 00:30:22',2),
-(48,'Hallway','°C','temperature','2020-10-11 00:30:22',2)
+(48,'Hallway','°C','temperature','2020-10-11 00:30:22',2),
 (666,'Test Sensor','°test','test_type','2020-10-11 00:30:22',1)
 ;
 /*!40000 ALTER TABLE `sensor` ENABLE KEYS */;
