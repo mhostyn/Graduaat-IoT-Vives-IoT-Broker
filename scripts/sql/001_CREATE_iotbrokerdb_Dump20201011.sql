@@ -62,7 +62,6 @@ CREATE TABLE `sensor` (
   `user_id` int NOT NULL,
   PRIMARY KEY (`sensor_id`),
   UNIQUE KEY `sensor_id` (`sensor_id`),
-  UNIQUE KEY `name` (`name`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `sensor_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -74,7 +73,57 @@ CREATE TABLE `sensor` (
 
 LOCK TABLES `sensor` WRITE;
 /*!40000 ALTER TABLE `sensor` DISABLE KEYS */;
-INSERT INTO `sensor` VALUES (1,'Omgevingssensor 1 - Temperatuur','°C','tempurature','2020-10-11 00:30:21',1),(2,'Omgevingssensor 1 - Vochtigheidsgraad','%','humidity','2020-10-11 00:30:21',1),(3,'Omgevingssensor 1 - Druk','hpa','pressure','2020-10-11 00:30:21',1),(4,'Omgevingssensor 1 - Batterijpercentage','%','battery','2020-10-11 00:30:21',1),(5,'Omgevingssensor 2 - Temperatuur','°C','tempurature','2020-10-11 00:30:21',1),(6,'Omgevingssensor 2 - Vochtigheidsgraad','%','humidity','2020-10-11 00:30:21',1),(7,'Omgevingssensor 2 - Druk','hpa','pressure','2020-10-11 00:30:21',1),(8,'Omgevingssensor 2 - Batterijpercentage','%','battery','2020-10-11 00:30:21',1),(9,'Omgevingssensor 3 - Temperatuur','°C','tempurature','2020-10-11 00:30:21',1),(10,'Omgevingssensor 3 - Vochtigheidsgraad','%','humidity','2020-10-11 00:30:21',1),(11,'Omgevingssensor 3 - Druk','hpa','pressure','2020-10-11 00:30:21',1),(12,'Omgevingssensor 3 - Batterijpercentage','%','battery','2020-10-11 00:30:21',1),(13,'Omgevingssensor 4 - Temperatuur','°C','tempurature','2020-10-11 00:30:21',2),(14,'Omgevingssensor 4 - Vochtigheidsgraad','%','humidity','2020-10-11 00:30:21',2),(15,'Omgevingssensor 4 - Druk','hpa','pressure','2020-10-11 00:30:21',2),(16,'Omgevingssensor 4 - Batterijpercentage','%','battery','2020-10-11 00:30:21',2),(17,'Omgevingssensor 5 - Temperatuur','°C','tempurature','2020-10-11 00:30:21',2),(18,'Omgevingssensor 5 - Vochtigheidsgraad','%','humidity','2020-10-11 00:30:21',2),(19,'Omgevingssensor 5 - Druk','hpa','pressure','2020-10-11 00:30:21',2),(20,'Omgevingssensor 5 - Batterijpercentage','%','battery','2020-10-11 00:30:21',2),(21,'Omgevingssensor 6 - Temperatuur','°C','tempurature','2020-10-11 00:30:21',2),(22,'Omgevingssensor 6 - Vochtigheidsgraad','%','humidity','2020-10-11 00:30:21',2),(23,'Omgevingssensor 6 - Druk','hpa','pressure','2020-10-11 00:30:21',2),(24,'Omgevingssensor 6 - Batterijpercentage','%','battery','2020-10-11 00:30:21',2),(25,'Omgevingssensor 2 - Signaalsterkte','lqi','linkquality','2020-10-11 00:30:21',1),(26,'Omgevingssensor 2 - Batterijvoltage','mV','voltage','2020-10-11 00:30:21',1),(27,'Omgevingssensor 3 - Signaalsterkte','lqi','linkquality','2020-10-11 00:30:21',1),(28,'Omgevingssensor 3 - Batterijvoltage','mV','voltage','2020-10-11 00:30:21',1),(29,'Omgevingssensor 4 - Signaalsterkte','lqi','linkquality','2020-10-11 00:30:21',2),(30,'Omgevingssensor 4 - Batterijvoltage','mV','voltage','2020-10-11 00:30:21',2),(31,'Omgevingssensor 5 - Signaalsterkte','lqi','linkquality','2020-10-11 00:30:21',2),(32,'Omgevingssensor 5 - Batterijvoltage','mV','voltage','2020-10-11 00:30:21',2),(33,'Omgevingssensor 1 - Signaalsterkte','lqi','linkquality','2020-10-11 00:30:21',1),(34,'Omgevingssensor 1 - Batterijvoltage','mV','voltage','2020-10-11 00:30:21',1),(35,'Omgevingssensor 6 - Signaalsterkte','lqi','linkquality','2020-10-11 00:30:21',2),(36,'Omgevingssensor 6 - Batterijvoltage','mV','voltage','2020-10-11 00:30:21',2),(37,'Bewegingssensor 1 - Batterijpercentage','%','battery','2020-10-11 00:30:21',1),(38,'Bewegingssensor 1 - Lichtsterkte','','illuminance','2020-10-11 00:30:21',1),(39,'Bewegingssensor 1 - Lichtsterkte LUX','lux','illuminance_lux','2020-10-11 00:30:21',1),(40,'Bewegingssensor 1 - Signaalsterkte','lqi','linkquality','2020-10-11 00:30:21',1),(41,'Bewegingssensor 1 - Beweging','bool','occupancy','2020-10-11 00:30:21',1),(42,'Bewegingssensor 1 - Batterijspanning','mv','voltage','2020-10-11 00:30:21',1),(43,'Bewegingssensor 2 - Batterijpercentage','%','battery','2020-10-11 00:30:21',2),(44,'Bewegingssensor 2 - Lichtsterkte','','illuminance','2020-10-11 00:30:21',2),(45,'Bewegingssensor 2 - Lichtsterkte LUX','lux','illuminance_lux','2020-10-11 00:30:22',2),(46,'Bewegingssensor 2 - Signaalsterkte','lqi','linkquality','2020-10-11 00:30:22',2),(47,'Bewegingssensor 2 - Beweging','bool','occupancy','2020-10-11 00:30:22',2),(48,'Bewegingssensor 2 - Temperatuur','°C','tempurature','2020-10-11 00:30:22',2);
+INSERT INTO `sensor` VALUES 
+(1,'Livingroom','°C','temperature','2020-10-11 00:30:21',1),
+(2,'Livingroom','%','humidity','2020-10-11 00:30:21',1),
+(3,'Livingroom','hpa','pressure','2020-10-11 00:30:21',1),
+(4,'Livingroom','%','battery','2020-10-11 00:30:21',1),
+(5,'Bedroom','°C','temperature','2020-10-11 00:30:21',1),
+(6,'Bedroom','%','humidity','2020-10-11 00:30:21',1),
+(7,'Bedroom','hpa','pressure','2020-10-11 00:30:21',1),
+(8,'Bedroom','%','battery','2020-10-11 00:30:21',1),
+(9,'Upstairs','°C','temperature','2020-10-11 00:30:21',1),
+(10,'Upstairs','%','humidity','2020-10-11 00:30:21',1),
+(11,'Upstairs','hpa','pressure','2020-10-11 00:30:21',1),
+(12,'Upstairs','%','battery','2020-10-11 00:30:21',1),
+(13,'Lounge','°C','temperature','2020-10-11 00:30:21',2),
+(14,'Lounge','%','humidity','2020-10-11 00:30:21',2),
+(15,'Lounge','hpa','pressure','2020-10-11 00:30:21',2),
+(16,'Lounge','%','battery','2020-10-11 00:30:21',2),
+(17,'Kitchen','°C','temperature','2020-10-11 00:30:21',2),
+(18,'Kitchen','%','humidity','2020-10-11 00:30:21',2),
+(19,'Kitchen','hpa','pressure','2020-10-11 00:30:21',2),
+(20,'Kitchen','%','battery','2020-10-11 00:30:21',2),
+(21,'Loft','°C','temperature','2020-10-11 00:30:21',2),
+(22,'Loft','%','humidity','2020-10-11 00:30:21',2),
+(23,'Loft','hpa','pressure','2020-10-11 00:30:21',2),
+(24,'Loft','%','battery','2020-10-11 00:30:21',2),
+(25,'Bedroom','lqi','linkquality','2020-10-11 00:30:21',1),
+(26,'Bedroom','mV','voltage','2020-10-11 00:30:21',1),
+(27,'Upstairs','lqi','linkquality','2020-10-11 00:30:21',1),
+(28,'Upstairs','mV','voltage','2020-10-11 00:30:21',1),
+(29,'Lounge','lqi','linkquality','2020-10-11 00:30:21',2),
+(30,'Lounge','mV','voltage','2020-10-11 00:30:21',2),
+(31,'Kitchen','lqi','linkquality','2020-10-11 00:30:21',2),
+(32,'Kitchen','mV','voltage','2020-10-11 00:30:21',2),
+(33,'Livingroom','lqi','linkquality','2020-10-11 00:30:21',1),
+(34,'Livingroom','mV','voltage','2020-10-11 00:30:21',1),
+(35,'Loft','lqi','linkquality','2020-10-11 00:30:21',2),
+(36,'Loft','mV','voltage','2020-10-11 00:30:21',2),
+(37,'Hallway','%','battery','2020-10-11 00:30:21',1),
+(38,'Hallway','','illuminance','2020-10-11 00:30:21',1),
+(39,'Hallway','lux','illuminance_lux','2020-10-11 00:30:21',1),
+(40,'Hallway','lqi','linkquality','2020-10-11 00:30:21',1),
+(41,'Hallway','bool','occupancy','2020-10-11 00:30:21',1),
+(42,'Hallway','mv','voltage','2020-10-11 00:30:21',1),
+(43,'Hallway','%','battery','2020-10-11 00:30:21',2),
+(44,'Hallway','','illuminance','2020-10-11 00:30:21',2),
+(45,'Hallway','lux','illuminance_lux','2020-10-11 00:30:22',2),
+(46,'Hallway','lqi','linkquality','2020-10-11 00:30:22',2),
+(47,'Hallway','bool','occupancy','2020-10-11 00:30:22',2),
+(48,'Hallway','°C','temperature','2020-10-11 00:30:22',2)
+(666,'Test Sensor','°test','test_type','2020-10-11 00:30:22',1)
+;
 /*!40000 ALTER TABLE `sensor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,7 +157,29 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Joske','Vermeulen','26d01f0b3dcd7cbddb2de08c3a95a740','joskev@e.mail','aa6c05c0-8709-4c4c-abc0-dbc3409cc745','d34db33f-1111-1111-1111-1111d34db33f','verified','2020-10-11 00:30:17'),(2,'Wesley','Kabouter','26d01f0b3dcd7cbddb2de08c3a95a740','kabouterw@e.mail','6447c1a4-c3c1-4584-bf76-6af46ca86310','d34db33f-2222-2222-2222-2222d34db33f','verified','2020-10-11 00:30:17');
+INSERT INTO `user` VALUES 
+(
+  1,
+  'Joske',
+  'Vermeulen',
+  '26d01f0b3dcd7cbddb2de08c3a95a740',
+  'joskev@e.mail',
+  'aa6c05c0-8709-4c4c-abc0-dbc3409cc745',
+  'd34db33f11111',
+  'verified',
+  '2020-10-11 00:30:17'
+  ),
+(
+    2,
+    'Wesley',
+    'Kabouter',
+    '26d01f0b3dcd7cbddb2de08c3a95a740',
+    'kabouterw@e.mail',
+    '6447c1a4-c3c1-4584-bf76-6af46ca86310',
+    'd34db33f22222',
+    'verified',
+    '2020-10-11 00:30:17'
+  );
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -127,19 +198,10 @@ UNLOCK TABLES;
 -- Create new user / grant permissions
 --
 USE `iotbrokerdb`;
-DROP USER IF EXISTS 'developerUser' @'localhost';
-CREATE USER 'developerUser' @'localhost' IDENTIFIED WITH mysql_native_password BY 'hFRfjCptDik9RQHH';
-GRANT ALL ON `iotbrokerdb`.* TO 'developerUser' @'localhost';
 DROP USER IF EXISTS 'webuser' @'localhost';
 CREATE USER 'webuser' @'localhost' IDENTIFIED WITH mysql_native_password BY 'hFRfjCptDik9RQHH';
 GRANT SELECT,
   INSERT,
   UPDATE,
   DELETE ON `iotbrokerdb`.* TO 'webuser' @'localhost';
-DROP USER IF EXISTS 'node-red' @'localhost';
-CREATE USER 'node-red' @'localhost' IDENTIFIED WITH mysql_native_password BY 'hFRfjCptDik9RQHH';
-GRANT SELECT,
-  INSERT,
-  UPDATE,
-  DELETE ON `iotbrokerdb`.* TO 'node-red' @'localhost';
 FLUSH PRIVILEGES;
