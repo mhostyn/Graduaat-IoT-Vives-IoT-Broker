@@ -1,9 +1,4 @@
 <?php
-$servername = ""; //indien het php bestand en de database beide op dezelfde computer staan.
-$username = "";
-$password = "";  //Gebruik het opgegeven paswoord  
-$dbname = "";     //database naam
-
 require_once('db_config.php');
 
 //Parameter 1 via GET in variabele waarde plaatsen
@@ -17,7 +12,7 @@ else { 			//indien geen parameters opgegeven
 echo $varWaarde1 ;
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli(DB_SERVER,DB_USER, DB_PASS, DB_NAME);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
