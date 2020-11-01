@@ -126,6 +126,7 @@ body {
       width: auto;
       color: #fff; }
 
+
 .popup {
   position: fixed;
   height: 100vh;
@@ -173,22 +174,40 @@ body {
     line-height: 1; }
   .popup__close:hover {
     color: #e40b14; }
-  .popup__close--delete {
+  .popup__close--delete__sensor {
     color: #e40b14;
-    position: relative;
-    top: -10rem;
-    left: -5rem;
+    position: fixed;
+    top: -5rem;
+    left: 1rem;
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 5%;
     border: none;
     transition: all 0.3s; }
-    .popup__close--delete:hover {
+    .popup__close--delete__sensor:hover {
       transform: translateY(-3px);
       transform: scale(1.3);
       color: red; }
-    .popup__close--delete:active,
-    .popup__close--delete :focus,
-    .popup__close--delete :visited {
+    .popup__close--delete__sensor:active,
+    .popup__close--delete__sensor :focus,
+    .popup__close--delete__sensor :visited {
+      border: none;
+      outline: none;
+      transform: translateY(3px);
+      transform: scale(1); }
+  .popup__close--delete__data {
+    color: #e40b14;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5%;
+    border: none;
+    transition: all 0.3s; }
+    .popup__close--delete__data:hover {
+      transform: translateY(-3px);
+      transform: scale(1.3);
+      color: red; }
+    .popup__close--delete__data:active,
+    .popup__close--delete__data :focus,
+    .popup__close--delete__data :visited {
       border: none;
       outline: none;
       transform: translateY(3px);
