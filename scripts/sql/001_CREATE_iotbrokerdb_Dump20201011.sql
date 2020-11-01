@@ -75,27 +75,27 @@ CREATE TABLE `sensor` (
 LOCK TABLES `sensor` WRITE;
 /*!40000 ALTER TABLE `sensor` DISABLE KEYS */;
 INSERT INTO `sensor` VALUES 
-(1,'Livingroom','°C','tempurature','2020-10-11 00:30:21',1),
+(1,'Livingroom','°C','temperature','2020-10-11 00:30:21',1),
 (2,'Livingroom','%','humidity','2020-10-11 00:30:21',1),
 (3,'Livingroom','hpa','pressure','2020-10-11 00:30:21',1),
 (4,'Livingroom','%','battery','2020-10-11 00:30:21',1),
-(5,'Bedroom','°C','tempurature','2020-10-11 00:30:21',1),
+(5,'Bedroom','°C','temperature','2020-10-11 00:30:21',1),
 (6,'Bedroom','%','humidity','2020-10-11 00:30:21',1),
 (7,'Bedroom','hpa','pressure','2020-10-11 00:30:21',1),
 (8,'Bedroom','%','battery','2020-10-11 00:30:21',1),
-(9,'Upstairs','°C','tempurature','2020-10-11 00:30:21',1),
+(9,'Upstairs','°C','temperature','2020-10-11 00:30:21',1),
 (10,'Upstairs','%','humidity','2020-10-11 00:30:21',1),
 (11,'Upstairs','hpa','pressure','2020-10-11 00:30:21',1),
 (12,'Upstairs','%','battery','2020-10-11 00:30:21',1),
-(13,'Lounge','°C','tempurature','2020-10-11 00:30:21',2),
+(13,'Lounge','°C','temperature','2020-10-11 00:30:21',2),
 (14,'Lounge','%','humidity','2020-10-11 00:30:21',2),
 (15,'Lounge','hpa','pressure','2020-10-11 00:30:21',2),
 (16,'Lounge','%','battery','2020-10-11 00:30:21',2),
-(17,'Kitchen','°C','tempurature','2020-10-11 00:30:21',2),
+(17,'Kitchen','°C','temperature','2020-10-11 00:30:21',2),
 (18,'Kitchen','%','humidity','2020-10-11 00:30:21',2),
 (19,'Kitchen','hpa','pressure','2020-10-11 00:30:21',2),
 (20,'Kitchen','%','battery','2020-10-11 00:30:21',2),
-(21,'Loft','°C','tempurature','2020-10-11 00:30:21',2),
+(21,'Loft','°C','temperature','2020-10-11 00:30:21',2),
 (22,'Loft','%','humidity','2020-10-11 00:30:21',2),
 (23,'Loft','hpa','pressure','2020-10-11 00:30:21',2),
 (24,'Loft','%','battery','2020-10-11 00:30:21',2),
@@ -122,7 +122,7 @@ INSERT INTO `sensor` VALUES
 (45,'Hallway','lux','illuminance_lux','2020-10-11 00:30:22',2),
 (46,'Hallway','lqi','linkquality','2020-10-11 00:30:22',2),
 (47,'Hallway','bool','occupancy','2020-10-11 00:30:22',2),
-(48,'Hallway','°C','tempurature','2020-10-11 00:30:22',2)
+(48,'Hallway','°C','temperature','2020-10-11 00:30:22',2)
 ;
 /*!40000 ALTER TABLE `sensor` ENABLE KEYS */;
 UNLOCK TABLES;
