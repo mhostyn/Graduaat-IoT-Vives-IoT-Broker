@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="css/t1-style.css">
     <link rel="shortcut icon" type="image/png" href="img/guage-logo.png">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="js/graph.js"></script>   
-    <script src="js/menus.js"></script>   
-   
+    <script src="js/graph.js"></script>
+    <script src="js/menus.js"></script>
+
     <title>Dashboard</title>
 </head>
 
-<?php include_once 'php/html_elements.php'; get_html_header_code(); ?>
+<?php include_once 'php/html_elements.php';
+get_html_header_code(); ?>
 
 <body>
-    <?php include 'php/test_session.php';?>
+    <?php include 'php/test_session.php'; ?>
 
     <main>
         <section id="section-card">
@@ -34,7 +34,7 @@
             //-- added cards through php
             ////////////////////////////////////////
             -->
-            <?php include 'php/get_cards.php';?>
+            <?php include 'php/get_cards.php'; ?>
 
             <!--  
             ////////////////////////////////////////
@@ -69,7 +69,7 @@
             </div>
         </section>
     </main>
-    
+
     <!--  
             ////////////////////////////////////////
             //-- pop-up section 
@@ -81,7 +81,7 @@
         <div class="popup" id="popup">
             <div class="popup__content">
                 <div class="popup__top">
-                <canvas id="myChart" class="chart"></canvas>
+                    <canvas id="myChart" class="chart"></canvas>
                 </div>
 
                 <div class="popup__bottom">
@@ -109,44 +109,64 @@
                         <label class="popup__form__label" for="name">Name:</label>
                         <input class="popup__form__input" type="text" name="name">
 
+
+                        <?php
+
+include_once 'php/test_scripts/get_sensor_types.php';
+
+echo get_sensor_types();
+
+?>
+
+
                         <!-- 
                             <label class="popup__form__label" for="api">Api-key:</label>
                             <input class="popup__form__input" type="text" name="api"> 
                         -->
+                        <!-- 
 
                         <label class="popup__form__label" for="type">Type:</label>
                         <select class="popup__form__selector selector" name="type">
-                            <option class="popup__form__option selector" value="TempratureC">Celcius</option>
-                            <option class="popup__form__option selector" value="TempratureF">Farenheit</option>
+                            <option class="popup__form__option selector" value="temperature">Celcius</option>
+                            <option class="popup__form__option selector" value="temperature">Farenheit</option>
                             <option class="popup__form__option selector" value="liter">Volume</option>
                             <option class="popup__form__option selector" value="bar">Pressure</option>
                         </select>
 
+
+                       
                         <!-- 
                             <label class="popup__form__label_unit" for="unit" value='unit'>Unit:</label>
                             <input class="popup__form__input" type="hidden" name="unit"> 
                         -->
 
-
+                        <!-- 
 
                         <label class="popup__form__label" for="unit">Unit:</label>
                         <select class="popup__form__selector selected" name="unit">
                             <option class="popup__form__option" value="celcius">°C</option>
-                            <option class="popup__form__option" value="Farenheit">Fahrenheit</option>
+                            <option class="popup__form__option" value="Farenheit">°F</option>
                             <option class="popup__form__option" value="liter">L</option>
                             <option class="popup__form__option" value="bar">Bar</option>
                         </select>
+                        -->
 
                         <input class="popup__form__submit" name="action" type="hidden" value="insert">
                         <input class="popup__form__submit" type="submit" value="Submit">
                     </form>
+
+                   
+
                 </div>
             </div>
         </div>
 
     </section>
+
+
 </body>
 
-<?php include_once 'php/html_elements.php'; get_html_footer_code(); ?>
+<?php include_once 'php/html_elements.php';
+get_html_footer_code(); ?>
 
 </html>

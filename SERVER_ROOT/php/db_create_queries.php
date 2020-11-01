@@ -2,7 +2,20 @@
 //|||||||||||||||||||||||1
 //--|SET GLOBAL VALUES TO DISPLAY IN THE CARD-DISPLAYER (NAME, ID, TIMESTAMP,....)1.1
 // $selectAllQuery = "SELECT * FROM sensor ORDER BY sensor_id";
-$selectAllQuery = 'SELECT S.* FROM sensor S, user U WHERE U.email = "'.$_SESSION["email"].'" AND U.password = "'.$_SESSION["password"].'" GROUP BY sensor_id';
+//$selectAllQuery = 'SELECT sensor.* FROM sensor, user WHERE user.user_id = "1" AND U.password = "'.$_SESSION["password"].'" GROUP BY sensor_id';
+$selectAllQuery = '
+    SELECT 
+        sensor.*
+    FROM
+        sensor
+    WHERE
+        sensor.user_id = 1
+    GROUP BY sensor_id;        
+';
+
+
+
+
 
 //--|PERFORM QUERY 1.2
 $this->values = $this->setValues($selectAllQuery);
