@@ -25,9 +25,8 @@ echo "Connection successfully";
     {
         $Sensorid=mysqli_real_escape_string($connection,$_POST['']);
         $Lichtsterkte=mysqli_real_escape_string($connection,$_POST['Lux']);
-        $Apikey=mysqli_real_escape_string($connection,$_POST['']);
-        $insert = "INSERT INTO sensor (time_stamp, Sensorid, Lichtsterkte, Apikey) 
-        VALUES (now(),'{$Sensorid}','{$Lichtstrekte}','{$Apikey}');";
+        $insert = "INSERT INTO sensor (Sensorid, Lichtsterkte) 
+        VALUES (now(),'{$Sensorid}','{$Lichtstrekte}');";
          mysqli_query($connection,$insert);
         
     }  
