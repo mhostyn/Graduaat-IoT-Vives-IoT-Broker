@@ -5,7 +5,27 @@ import time
 import board
 import busio
 import requests
-url = 'https://www.w3schools.com/python/demopage.php'
+
+##################################################
+#              USER SENSOR CONFIG                #
+#   No more user interaction beyond this line    #
+#                                                #
+##################################################
+
+#API_KEY given when registered
+user_api_key = 'd34db33f11111'
+#SENSOR_ID given when sensor created on Dashboard
+user_sensor_id = '666'
+#IoT-Broker URL
+user_url = 'http://localhost'
+
+##################################################
+#                                                #
+#   No more user interaction beyond this line    #
+#                                                #
+##################################################
+
+write_url = user_url + 'php/write.php'
 
 import adafruit_tsl2591
 
@@ -14,18 +34,6 @@ i2c = busio.I2C(board.SCL, board.SDA)
 
 # Initialize the sensor.
 sensor = adafruit_tsl2591.TSL2591(i2c)
-
-# You can optionally change the gain and integration time:
-# sensor.gain = adafruit_tsl2591.GAIN_LOW (1x gain)
-# sensor.gain = adafruit_tsl2591.GAIN_MED (25x gain, the default)
-# sensor.gain = adafruit_tsl2591.GAIN_HIGH (428x gain)
-# sensor.gain = adafruit_tsl2591.GAIN_MAX (9876x gain)
-# sensor.integration_time = adafruit_tsl2591.INTEGRATIONTIME_100MS (100ms, default)
-# sensor.integration_time = adafruit_tsl2591.INTEGRATIONTIME_200MS (200ms)
-# sensor.integration_time = adafruit_tsl2591.INTEGRATIONTIME_300MS (300ms)
-# sensor.integration_time = adafruit_tsl2591.INTEGRATIONTIME_400MS (400ms)
-# sensor.integration_time = adafruit_tsl2591.INTEGRATIONTIME_500MS (500ms)
-# sensor.integration_time = adafruit_tsl2591.INTEGRATIONTIME_600MS (600ms)
 
 # Read the total lux, IR, and visible light levels and print it every second.
 while True:
@@ -45,8 +53,10 @@ while True:
     full_spectrum = sensor.full_spectrum
     print("Full spectrum (IR + visible) light: {0}".format(full_spectrum))
     time.sleep(1.0)                                                                                                                                                                                                                                                            
-        data{   'value': 'sensor.lux',                                                                                                                                                                                                                                                         'sensor_id' : '',
-                'api_key' : 'd34db33f-1111-1111-1111-1111d34db33f'
+        data{
+            'sensor_id' = user_sensor_id,
+            'api_key' : user_api_key,
+            'value': sensor.lux                                                                                                                                                                                                                                                     'sensor_id' : '',
                 }
 
         x= requests.post(url,data)
