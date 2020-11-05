@@ -71,5 +71,3 @@ $selectLastTenDataIDQuery = 'SELECT D.data_id FROM data D, User U WHERE U.email 
 //--|PERFORM QUERY 4.2
 $this->dataid = $this->setValues($selectLastTenDataIDQuery);
 //|||||||||||||||||||||||
-
-?>

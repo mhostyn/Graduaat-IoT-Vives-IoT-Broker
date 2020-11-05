@@ -3,18 +3,19 @@
 
 $html_element = "";
 
-function get_html_header_code() {
+function get_html_header_code()
+{
 
-  
+
   /*
   IF SESSION
 
   HELLO firstname
   LOGOUT
   
-  */  
+  */
 
-    $html_element = '
+  $html_element = '
     
     <!-- Navbar start -->
       <header>
@@ -60,15 +61,16 @@ function get_html_header_code() {
    - LOGIN
    - REGISTER
 
-  */  
+  */
 
-    echo $html_element;
+  echo $html_element;
 }
 
-function get_html_footer_code() {
-    
-    //dit eenmaal wijzigen om data in te plooien
-    $html_element = '
+function get_html_footer_code()
+{
+
+  //dit eenmaal wijzigen om data in te plooien
+  $html_element = '
 
     <!-- footer start -->
       <footer>
@@ -78,12 +80,13 @@ function get_html_footer_code() {
 
     ';
 
-    echo $html_element;
+  echo $html_element;
 }
 
-function get_html_ERROR_code() {
+function get_html_ERROR_code()
+{
 
-    $html_element = "";
+  $html_element = "";
 
-    return $html_element;
+  return $html_element;
 }

@@ -1,12 +1,13 @@
-    <!--
+<?php
+    /*
     Dit is een voorbeeldconfiguratie.
     
     Gelieve deze te hernoemen naar config.php
 
     en vervolgens naar smaak aan te passen waar nodig
-    -->
+    */
 
-<?php
+
     // de database login gegevens
     
     $dbhost = 'localhost';
@@ -18,4 +19,3 @@
     define("DB_USER",  $dbuser);
     define("DB_PASS", $dbpass);
     define("DB_NAME", $dbname);
-?>
