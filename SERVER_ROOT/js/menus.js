@@ -1,32 +1,54 @@
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function () {
 
   var selector = document.querySelector('.selector');
 
-selector.addEventListener('change', init);
+  selector.addEventListener('change', init);
 
-function init(){
+  function init() {
 
-  var selected = document.querySelector('.selected');
+    var selected = document.querySelector('.selected');
 
-  selection = selector.value;
+    selection = selector.value;
 
-                switch (selection) {
-                    case 'TempratureC':
-                      selected.options[0].selected = true ;
-                      break;
+    switch (selection) {
 
-                    case 'TempratureF':
-                      selected.options[1].selected = true ;
-                      break;
+      case 'battery':
+        selected.options[0].selected = true;
+        break;
 
-                    case 'liter':
-                      selected.options[2].selected = true ;
-                      break;
+      case 'humidity':
+        selected.options[0].selected = true;
+        break;
 
-                    case 'bar':
-                      selected.options[3].selected = true ;
-                  }
+      case 'illuminance':
+        selected.options[1].selected = true;
+        break;
 
-}
+      case 'illuminance_lux':
+        selected.options[2].selected = true;
+        break;
+
+      case 'linkquality':
+        selected.options[3].selected = true;
+        break;
+
+      case 'occupancy':
+        selected.options[4].selected = true;
+        break;
+
+      case 'pressure':
+        selected.options[5].selected = true;
+        break;
+
+      case 'temperature':
+        selected.options[6].selected = true;
+        break;
+
+      case 'voltage':
+        selected.options[9].selected = true;
+        break;
+    }
+
+  }
 
 });

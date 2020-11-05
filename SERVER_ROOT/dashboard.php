@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/graph.js"></script>   
     <script src="js/menus.js"></script>   
-   
+        
     <title>Dashboard</title>
 </head>
 
@@ -114,27 +114,43 @@
                             <input class="popup__form__input" type="text" name="api"> 
                         -->
 
+
+                        
+
                         <label class="popup__form__label" for="type">Type:</label>
                         <select class="popup__form__selector selector" name="type">
-                            <option class="popup__form__option selector" value="TempratureC">Celcius</option>
-                            <option class="popup__form__option selector" value="TempratureF">Farenheit</option>
-                            <option class="popup__form__option selector" value="liter">Volume</option>
-                            <option class="popup__form__option selector" value="bar">Pressure</option>
-                        </select>
 
+                            <option class="popup__form__option selector" value="battery">Battery Percentage</option>
+                            <option class="popup__form__option selector" value="humidity">Relative humidity</option>
+                            <option class="popup__form__option selector" value="illuminance">Lighting</option>
+                            <option class="popup__form__option selector" value="illuminance_lux">Lighting Lux</option>
+                            <option class="popup__form__option selector" value="linkquality">Link Quality</option>
+                            <option class="popup__form__option selector" value="occupancy">Occupancy Detection</option>
+                            <option class="popup__form__option selector" value="pressure">Atmospheric Pressure</option>
+                            <option class="popup__form__option selector" value="temperature">Temperature</option>
+                            <option class="popup__form__option selector" value="voltage">Battery Voltage</option>
+
+                        </select>
+                      
                         <!-- 
                             <label class="popup__form__label_unit" for="unit" value='unit'>Unit:</label>
                             <input class="popup__form__input" type="hidden" name="unit"> 
                         -->
-
-
-
+                        
                         <label class="popup__form__label" for="unit">Unit:</label>
                         <select class="popup__form__selector selected" name="unit">
-                            <option class="popup__form__option" value="celcius">°C</option>
-                            <option class="popup__form__option" value="Farenheit">Fahrenheit</option>
-                            <option class="popup__form__option" value="liter">L</option>
-                            <option class="popup__form__option" value="bar">Bar</option>
+
+                            <option class="popup__form__option" value="%">%</option>
+                            <option class="popup__form__option" value=""></option>
+                            <option class="popup__form__option" value="lux">lux</option>
+                            <option class="popup__form__option" value="lqi">lqi</option>
+                            <option class="popup__form__option" value="bool">bool</option>
+                            <option class="popup__form__option" value="hpa">hpa</option>
+                            <option class="popup__form__option" value="°C">°C</option>
+                            <option class="popup__form__option" value="°F">°F</option>
+                            <option class="popup__form__option" value="°K">°K</option>
+                            <option class="popup__form__option" value="mv">mV</option>
+
                         </select>
 
                         <input class="popup__form__submit" name="action" type="hidden" value="insert">
