@@ -1,3 +1,82 @@
+
+document.getElementById("check1").disabled = true;
+
+   
+//Cookie banner
+const cookieBanner = document.querySelector(".cookie-banner-container");
+const cookieButton = document.querySelector(".cookie-banner-container button");
+
+setTimeout(() => {
+    if(!localStorage.getItem("bannerDisplayed"))
+    cookieBanner.classList.add("active");
+}, 3000);
+
+cookieButton.addEventListener("click", () => {
+    cookieBanner.classList.remove("active");
+    localStorage.setItem("bannerDisplayed", "true")
+});
+
+if (localStorage.getItem('bannerDisplayed') === null) {
+  // display banner
+}
+  
+
+// GET DROPDOWN MENU ELEMENT
+var checkbox_2 = document.getElementById("test");
+
+// GET THE BUTTON
+var submit = document.querySelector('.submit');
+
+
+//ADD EVENT TO BUTTON
+submit.addEventListener('click', function(){
+
+    //  GET THE VALUE OF THE SELECTION
+    var test = checkbox_2.options[checkbox_2.selectedIndex].value;
+
+    //SET THE COOCKIE TO THE VALUE OF THZE SELECTION
+    document.cookie = 'valuePreference = ' + test;
+   
+    // GET THE COOCKIE TO A VARIABLE
+    var temp_cookie = getCookie('valuePreference'); 
+
+    //cookie expire
+    var now = new Date();
+    now.setMonth(now.getMonth() + 12);
+    document.cookie = 'cookie expires = ' + now.toUTCString() + ";";
+
+    // START RUNNING THE CODE IF (COOCKIE = TO '')
+    if(temp_cookie == '°C'){
+      //Change table to °C
+    }else if(temp_cookie == '°F'){
+      //Change table to °F
+    }
+   
+})
+
+if(document.cookie !=""){
+  cookieBanner.style = "none";
+}
+
+  
+// FUNCTION TO GET THE COOCKIE -- PARAM = TO THE COOCKIE NAME SET BY THE DEVELEPOR
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+ 
 // Index homepage
 $(document).ready(function(){
     $(window).scroll(function(){
@@ -70,78 +149,4 @@ $(document).ready(function(){
             }
         }
     });
-});
-
-// Register Page
-const slidePage = document.querySelector(".slide-page");
-const nextBtnFirst = document.querySelector(".firstNext");
-const prevBtnSec = document.querySelector(".prev-1");
-const nextBtnSec = document.querySelector(".next-1");
-const prevBtnThird = document.querySelector(".prev-2");
-const nextBtnThird = document.querySelector(".next-2");
-const prevBtnFourth = document.querySelector(".prev-3");
-const submitBtn = document.querySelector(".submit");
-const progressText = document.querySelectorAll(".step p");
-const progressCheck = document.querySelectorAll(".step .check");
-const bullet = document.querySelectorAll(".step .bullet");
-let current = 1;
-
-nextBtnFirst.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-25%";
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-});
-nextBtnSec.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-50%";
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-});
-nextBtnThird.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-75%";
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-});
-submitBtn.addEventListener("click", function(){
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-  setTimeout(function(){
-    alert("Your Form Successfully Signed up");
-    location.reload();
-  },800);
-});
-
-prevBtnSec.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "0%";
-  bullet[current - 2].classList.remove("active");
-  progressCheck[current - 2].classList.remove("active");
-  progressText[current - 2].classList.remove("active");
-  current -= 1;
-});
-prevBtnThird.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-25%";
-  bullet[current - 2].classList.remove("active");
-  progressCheck[current - 2].classList.remove("active");
-  progressText[current - 2].classList.remove("active");
-  current -= 1;
-});
-prevBtnFourth.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-50%";
-  bullet[current - 2].classList.remove("active");
-  progressCheck[current - 2].classList.remove("active");
-  progressText[current - 2].classList.remove("active");
-  current -= 1;
 });
