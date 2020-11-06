@@ -21,6 +21,18 @@ echo "Connection successfully";
          mysqli_query($connection,$insert);
         
     }  
-$conn->close();
+   
+    if else($_SERVER['REQUEST_METHOD']=='POST')
+    {
+        $Sensorid=mysqli_real_escape_string($connection,$_POST['']);
+        $Lichtsterkte=mysqli_real_escape_string($connection,$_POST['Lux']);
+        $insert = "INSERT INTO sensor (Sensorid, Lichtsterkte,)
+        WHERE user_id ='d34db33f22222';
+        VALUES (now(),'{$Sensorid}','{$Lichtstrekte}');";
+         mysqli_query($connection,$insert);
+        
+    }  
+
+    $conn->close();
 ?>
 
