@@ -9,7 +9,7 @@ require (__DIR__.'/PHPMailer/PHPMailer.php');
 require (__DIR__.'/PHPMailer/SMTP.php');
 
 session_start();
-require "db_handler.php";
+require "functions.php";
 
 $connection = db_connect();
 $email = "";            //email of user

@@ -23,7 +23,7 @@
 <?php include_once 'php/html_elements.php'; get_html_header_code(); ?>
 
 <body>
-    <?php include 'php/test_session.php';?>
+    <?php include 'php/controllerUserData.php';?>
 
     <main>
         <section id="section-card">
