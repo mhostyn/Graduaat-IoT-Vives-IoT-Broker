@@ -1,15 +1,12 @@
 <?php
 require_once('db_config.php');
 
+$qry_user_id_user mysqli_query($con," SELECT `user.user_id` FROM user WHERE user.api_key = `{$post_api_key};`");
+$qry_sensor_id_user mysqli_query($con," SELECT `sensor.user_id` FROM sensor WHERE sensor.user_id = `{$post_sensor_id};`");
 
-$api_key_uservalue1 = "d34db33f11111";
-$api_key_uservalue2 = "d34db33f22222";
-
-$api_key= $sensor = $location = $value1 = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $api_key = test_input($_POST["api_key"]);
-    if($api_key == $api_key_uservalue1) {
+    if($qry_user_id_user == $qry_sensor_id_user ) {
         $sensorid = test_input($_POST[""]);
         $lichtsterkte = test_input($_POST["lux"]);
        
@@ -33,31 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->close();
     }
    
-    if else ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $api_key = test_input($_POST["api_key"]);
-        if($api_key == $api_key_uservalue2) {
-            $sensorid = test_input($_POST[""]);
-            $lichtsterkte = test_input($_POST["lux"]);
-           
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            } 
-            
-            $sql = "INSERT INTO sensor (sensorid,lichtsterkte)
-            VALUES ('" . $sensorid . "',  '" . $lichtsterkte . "')";
-            
-            if ($conn->query($sql) === TRUE) {
-                echo "New record created successfully";
-            } 
-            else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-        
-            $conn->close();
-        }
     else {
         echo "Wrong API Key provided.";
     }
