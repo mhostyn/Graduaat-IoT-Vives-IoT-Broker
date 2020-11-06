@@ -47,9 +47,5 @@ if($email == false){
         </div>
     </div>
 </body>
-
-    <?php 
-    /* include_once "php/html_elements.php"; get_html_footer_code(); */
-    ?>
-
+<?php /* include_once "php/html_elements.php"; get_html_footer_code(); */?>
 </html>

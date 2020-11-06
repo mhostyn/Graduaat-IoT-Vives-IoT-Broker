@@ -85,8 +85,6 @@
         </div>
     </section>
 
-
-
     <!-- teams section start -->
     <section class="teams" id="teams">
         <div class="max-width">
@@ -204,10 +202,8 @@
             </div>
         </div>
     </section>
-
-    <?php include_once "php/html_elements.php"; get_html_footer_code(); ?>
-
-    <script src="js/app.js"></script>
+    
 </body>
-
+<?php include_once "php/html_elements.php"; get_html_footer_code(); ?> 
+<script src="js/app.js"></script>
 </html>

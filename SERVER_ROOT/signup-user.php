@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <title>Signup Form | Connect.</title>
     <link rel="stylesheet" href="css/formStyle.css">
 </head>
@@ -47,6 +46,8 @@
                 <div class="form-group">
                     <input class="form-control button" type="submit" name="signup" value="Signup">
                 </div>
+                <div class="link login-link text-center"> 
+                    <input type="checkbox" required> <a href="terms-and-conditions.php"> Our Terms and Conditions</a>
                 <div class="link login-link text-center">Already a member? 
                     <a href="login-user.php">Login here</a>
                 </div>
@@ -54,7 +55,5 @@
         </div>
     </div>
 </body>
-
 <?php /* include_once "php/html_elements.php"; get_html_footer_code(); */ ?>
-
 </html>

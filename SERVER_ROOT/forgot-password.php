@@ -8,11 +8,8 @@ require_once "php/controllerUserData.php";
     <title>Forgot Password | Connect.</title>
     <link rel="stylesheet" href="css/formStyle.css">
 </head>
-<body>
-    
-<?php include_once "php/html_elements.php"; get_html_header_code(); ?>
-
-
+<body>  
+    <?php include_once "php/html_elements.php"; get_html_header_code(); ?>
     <!-- Signup form start -->
     <div class="container">
         <div class="row">
@@ -35,8 +32,6 @@ require_once "php/controllerUserData.php";
             </div>
         </div>
     </div>
-    <?php 
-    /* include_once "php/html_elements.php"; get_html_footer_code(); */
-    ?>
 </body>
+<?php /* include_once "php/html_elements.php"; get_html_footer_code(); */?>
 </html>
