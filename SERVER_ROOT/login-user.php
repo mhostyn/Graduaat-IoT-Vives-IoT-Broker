@@ -43,11 +43,6 @@
                 </div>
             </div>
         </div>
-
-        <?php
-        /* include_once "php/html_elements.php"; get_html_footer_code(); */
-        ?>
     </body>
-
-
+    <?php /* include_once "php/html_elements.php"; get_html_footer_code(); */?>
 </html>
