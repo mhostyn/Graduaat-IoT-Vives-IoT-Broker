@@ -22,7 +22,7 @@ $qry_sensor_id_user mysqli_query($con," SELECT `sensor.user_id` FROM sensor WHER
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if($qry_user_id_user == $qry_sensor_id_user ) {
+    if($post_api_key == $post_sensor_id) {
         $sensorid = test_input($_POST[""]);
         $lichtsterkte = test_input($_POST["lux"]);
        
