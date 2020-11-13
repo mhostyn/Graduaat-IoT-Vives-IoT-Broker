@@ -11,16 +11,16 @@ require (__DIR__.'/PHPMailer/SMTP.php');
 session_start();
 require "functions.php";
 
-$connection = db_connect();
-$email = "";            //email of user
-$firstname = "";        //firstname of user
-$lastname = "";         //lastname of user
-$password = "";          //password
-$cpassword = "";         //confirmed password
-$encpassword = "";        //encripted password
-$vkey = "";               //verification key, also used for password reset, when vkey is used, vkey goes to "0"
-$apikey = "";             //apikey for user
-$errors = array();      //all the errors
+$connection = db_connect();                                                 //get the credentials 
+$email = "";                                                                //email of user
+$firstname = "";                                                            //firstname of user
+$lastname = "";                                                             //lastname of user
+$password = "";                                                             //password
+$cpassword = "";                                                            //confirmed password
+$encpassword = "";                                                          //encripted password
+$vkey = "";                                                                 //verification key, also used for password reset, when vkey is used, vkey goes to "0"
+$apikey = "";                                                               //apikey for user
+$errors = array();                                                          //all the errors
 
 //if user signup button
 if(isset($_POST['signup'])){
@@ -40,10 +40,10 @@ if(isset($_POST['signup'])){
     }
 
     if(count($errors) === 0){
-        $encpassword = md5($password);
-        $vkey= rand(9999999999,1111111111);
-        $apikey= uniqid();
-        $status = "verification_sent";
+        $encpassword = md5($password);                                      //encrypt password with md5
+        $vkey= rand(9999999999,1111111111);                                 //create random number between ... and ...
+        $apikey= uniqid();                                                  //create a uniqid as apikey
+        $status = "verification_sent";                                      //set status to verification sent
         $insert_data = "INSERT INTO user (firstname, lastname, password, email, vkey, api_key, status) 
                         VALUES ('{$firstname}','{$lastname}','{$encpassword}','{$email}','{$vkey}','{$apikey}','{$status}');";
         echo($insert_data);
@@ -52,7 +52,7 @@ if(isset($_POST['signup'])){
         if($data_check){
             
             $mail = new PHPMailer(true);
-            $recipient = $email;
+            $recipient = $email;                                            //recipient = email that new user put int 
 
             try {
                 //Server settings
@@ -69,16 +69,16 @@ if(isset($_POST['signup'])){
                 
                 //Recipients
                 $mail->setFrom('iot.broker.vives@gmail.com', 'Connect.');
-                $mail->addAddress($recipient);                          // Who's the recipient?
+                $mail->addAddress($recipient);                              // Who's the recipient?
                 $body = "<p>Hello,</p><p>Thank you for your registration.</p><p>Here is the verification key: <b>{$vkey}</p></b>";
                 $body .= "<p>You will need the verification key to log in to your account.</p><br></p><p>And here is the API: <b>{$apikey}</b></p>";
                 $body .= "<p>An API key is a unique identifier for you and the device you will connect in this broker.</p>";
                 $body .= "<p style='border-top:2px solid #eee; padding-top:1rem; color:#888; font-size:.8em'>If you did not register an account, you can ignore this e-mail. </p>";
                 // Content
-                $mail->isHTML(true);                                  // Set email format to HTML
-                $mail->Subject = 'Registratie Connect.';    
-                $mail->Body    = $body;
-                $mail->AltBody = strip_tags($body);                   // Backup so that the recipient sees something when HTML doesn't work for some reason
+                $mail->isHTML(true);                                        // Set email format to HTML
+                $mail->Subject = 'Registratie Connect.';                    //subject of the mail
+                $mail->Body    = $body;                                     
+                $mail->AltBody = strip_tags($body);                         // Backup so that the recipient sees something when HTML doesn't work for some reason
 
                 $mail->send();
 
@@ -86,13 +86,12 @@ if(isset($_POST['signup'])){
                 $_SESSION["info"] = $info;
                 $_SESSION["email"] = $email;
                 $_SESSION["password"] = $encpassword;
-                header('location: user-otp.php');
+                header('location: user-otp.php');                           //sent user to page where he needs to put the otp password
                 exit();
             }   
                 
             catch (Exception $e) {
-               //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-               //for testing
+               //for testing    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
             
         }else{
@@ -105,7 +104,7 @@ if(isset($_POST['signup'])){
     
 }
 
-//if user click verification vkey submit button     //side note otp => One Time Password
+//if user click verification vkey submit button                             //side note otp => One Time Password
 if(isset($_POST['check'])){
     $_SESSION["info"] = "";
     $otp_vkey = mysqli_real_escape_string($connection, $_POST['vkey']);
@@ -115,16 +114,14 @@ if(isset($_POST['check'])){
         $fetch_data = mysqli_fetch_assoc($vkey_res);
         $fetch_vkey = $fetch_data['vkey'];
         $email = $fetch_data['email'];
-        $status = 'verified';
-        $vkey = 0;                                                      //vkey naar 0 zetten om aan te duiden dat de vkey (als OTP) al gebruikt is
-        $update_vkey = "UPDATE user SET vkey = '{$vkey}', status = '{$status}' WHERE vkey = '{$fetch_vkey}';";      //update vkey en status waar dat vkey = gefetchte vkey (oude eenmalig wachtwoord)
+        $status = 'verified';                                               //set status to verified, user confermt e-mail via vkey
+        $vkey = 0;                                                          //set vkey to 0, the password has been used
+        $update_vkey = "UPDATE user SET vkey = '{$vkey}', status = '{$status}' WHERE vkey = '{$fetch_vkey}';";      //update vkey and status where vkey = fetched vkey (old otp password)
         $update_res = mysqli_query($connection, $update_vkey);
-        echo($update_vkey);
-        echo($update_res);
         if($update_res){
             $_SESSION["firstname"] = $firstname;
             $_SESSION["email"] = $email;
-            header('location: verification_sent.html');
+            header('location: verification_sent.html');                     //sent user to verification sent page
             exit();
         }else{
            //for testing  $errors['otp-error'] = "Failed while updating code!";
@@ -138,8 +135,8 @@ if(isset($_POST['check'])){
 if(isset($_POST['login'])){
     $email = mysqli_real_escape_string($connection, $_POST['email']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
-    $encpassword = md5($password);
-    $check_email = "SELECT * FROM user WHERE email = '{$email}'";
+    $encpassword = md5($password);                                              //encrypt password with md5
+    $check_email = "SELECT * FROM user WHERE email = '{$email}'";               //see if the email is in use
     $res = mysqli_query($connection, $check_email);
     if(mysqli_num_rows($res) > 0){
         $fetch = mysqli_fetch_assoc($res);
@@ -148,14 +145,13 @@ if(isset($_POST['login'])){
             $_SESSION["email"] = $email;
             $_SESSION["password"] = $encpassword;
             $status = $fetch['status'];
-            if($status == 'verified'){
+            if($status == 'verified'){                                          //is the status is verified (user confirmed email via vkey)
                 $_SESSION["email"] = $email;
-                echo("to homepage");
-                header('location: dashboard.php');
+                header('location: dashboard.php');                              //sent user to the dasboard page
             }else{
                 $info = "It's look like you haven't still verify your email - $email";
                 $_SESSION["info"] = $info;
-                header('location: user-otp.php');
+                header('location: user-otp.php');                               //sent user to otp page
             }
         }else{
             $errors['email'] = "Incorrect email or password!";
@@ -168,11 +164,11 @@ if(isset($_POST['login'])){
 //if user clicks continue button in forgot password form
 if(isset($_POST['check-email'])){
     $email = mysqli_real_escape_string($connection, $_POST['email']);
-    $check_email = "SELECT * FROM user WHERE email='{$email}';";
+    $check_email = "SELECT * FROM user WHERE email='{$email}';";                //see if the email is in use
     $run_sql = mysqli_query($connection, $check_email);
     if(mysqli_num_rows($run_sql) > 0){
-        $vkey= rand(9999999999,1111111111);
-        $insert_vkey = "UPDATE user SET vkey = '{$vkey}' WHERE email = '{$email}';";
+        $vkey= rand(9999999999,1111111111);                                     //create a new vkey between  ... and ...
+        $insert_vkey = "UPDATE user SET vkey = '{$vkey}' WHERE email = '{$email}';";    //add the new vkey to the database via update
         $run_query =  mysqli_query($connection, $insert_vkey);
         if($run_query){
 
@@ -183,35 +179,35 @@ if(isset($_POST['check-email'])){
 
             try {
                 //Server settings
-                $mail->SMTPDebug  = 0;                                      // Enable verbose debug output
+                $mail->SMTPDebug  = 0;                                          // Enable verbose debug output
                 $mail->isSMTP();                                            
-                $mail->Mailer     = "smtp";                                 // Send using SMTP
-                $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
-                $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-                $mail->Username   = 'iot.broker.vives@gmail.com';           // SMTP username
-                $mail->Password   = 'Vives2020*';                           // SMTP password
-                $mail->SMTPSecure = "tls";                                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-                $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+                $mail->Mailer     = "smtp";                                     // Send using SMTP
+                $mail->Host       = 'smtp.gmail.com';                           // Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                       // Enable SMTP authentication
+                $mail->Username   = 'iot.broker.vives@gmail.com';               // SMTP username
+                $mail->Password   = 'Vives2020*';                               // SMTP password
+                $mail->SMTPSecure = "tls";                                      // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                $mail->Port       = 587;                                        // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
                 
 
                 //Recipients
                 $mail->setFrom('iot.broker.vives@gmail.com', 'Connect.');
-                $mail->addAddress($recipient);     // Who's the recipient?
+                $mail->addAddress($recipient);                                  // Who's the recipient?
                 $body = "Your reset code is <b>{$vkey}<b>";
 
                 // Content
-                $mail->isHTML(true);                                  // Set email format to HTML
+                $mail->isHTML(true);                                            // Set email format to HTML
                 $mail->Subject = 'Password reset code';
                 $mail->Body    = $body;
-                $mail->AltBody = strip_tags($body);                   // Backup so that the recipient sees something when HTML doesn't work for some reason
+                $mail->AltBody = strip_tags($body);                             // Backup so that the recipient sees something when HTML doesn't work for some reason
 
                 $mail->send();          
                 $info = "We've sent a resetcode to your email - $email"; 
                 $_SESSION["info"] = $info;
                 $_SESSION["email"] = $email;
-                header('location: reset-code.php');
+                header('location: reset-code.php');                             //send user to reset code page
             }catch (Exception $e) {
-                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                // for testing echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
         }else{
             $errors['otp-error'] = "Failed while sending code!";
@@ -225,7 +221,7 @@ if(isset($_POST['check-email'])){
 if(isset($_POST['check-reset-otp'])){
     $_SESSION["info"] = "";
     $otp_vkey = mysqli_real_escape_string($connection, $_POST['vkey']);
-    $check_vkey = "SELECT * FROM user WHERE vkey = $otp_vkey";
+    $check_vkey = "SELECT * FROM user WHERE vkey = $otp_vkey";                  //check if vkey is in use
     $vkey_res = mysqli_query($connection, $check_vkey);
     if(mysqli_num_rows($vkey_res) > 0){
         $fetch_data = mysqli_fetch_assoc($vkey_res);
@@ -233,10 +229,10 @@ if(isset($_POST['check-reset-otp'])){
         $_SESSION["email"] = $email;
         $info = "Please create a new password that you don't use on any other site.";
         $_SESSION["info"] = $info;
-        header('location: new-password.php');
+        header('location: new-password.php');                                   //send user to new password page
         exit();
     }else{
-        $errors['otp-error'] = "You've entered incorrect code!";
+        $errors['otp-error'] = "You've entered an incorrect code!";
     }
 }
 
@@ -245,16 +241,16 @@ if(isset($_POST['change-password'])){
     $_SESSION["info"] = "";
     $password = mysqli_real_escape_string($connection, $_POST['password']);
     $cpassword = mysqli_real_escape_string($connection, $_POST['cpassword']);
-    if($password !== $cpassword){
+    if($password !== $cpassword){                                               //check if passwords match 
         $errors['password'] = "Confirm password not matched!";
     }else{
-        $vkey = 0;
-        $email = $_SESSION["email"];                        //getting the email using session
-        $encpassword = md5($password);
+        $vkey = 0;                                                              //set vkey to 0
+        $email = $_SESSION["email"];                                            //getting the email using session
+        $encpassword = md5($password);                                          //encrypt the password with md5
         $update_pass = "UPDATE user SET vkey = $vkey, password = '$encpassword' WHERE email = '$email'";
         $run_query = mysqli_query($connection, $update_pass);
         if($run_query){
-            $info = "Your password is changed. Now you can login with your new password.";
+            $info = "Your password is changed. You can now login with your new password.";
             $_SESSION["info"] = $info;
             $_SESSION["password"] = $update_pass;
             header('Location: password-changed.php');
